@@ -1,0 +1,6 @@
+easy_admin:
+  entities:
+    - App\Entity\User
+    - App\Entity\Designer
+    - App\Entity\Category
+    - App\Entity\Product
