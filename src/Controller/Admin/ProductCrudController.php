@@ -22,6 +22,7 @@ class ProductCrudController extends AbstractCrudController
     {
         return [
             TextField::new('name'),
+<<<<<<< HEAD
             SlugField::new('slug')
                 ->setTargetFieldName('name'),
             AssociationField::new('designer'),
@@ -35,6 +36,15 @@ class ProductCrudController extends AbstractCrudController
             TextField::new('size'),
             MoneyField::new('price')
                 ->setCurrency('EUR')
+=======
+            SlugField::new('slug')->setTargetFieldName('name'),
+            AssociationField::new('designer'),
+            ImageField::new('image')->setUploadDir('public/assets/img'),
+            TextareaField::new('description'),
+            AssociationField::new('category'),
+            TextField::new('size'),
+            MoneyField::new('price')->setCurrency('EUR')
+>>>>>>> b29129fec2eb1b2fe4c98912b5d9c2ec6c3e5eb1
         ];
     }
 }

@@ -43,7 +43,11 @@ class Product
     private $price;
 
     /**
+<<<<<<< HEAD
      * @ORM\Column(type="string", length=255, nullable=true)
+=======
+     * @ORM\Column(type="string", length=255)
+>>>>>>> b29129fec2eb1b2fe4c98912b5d9c2ec6c3e5eb1
      */
     private $size;
 

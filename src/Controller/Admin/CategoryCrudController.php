@@ -18,8 +18,12 @@ class CategoryCrudController extends AbstractCrudController
     {
         return [
             TextField::new('name'),
+<<<<<<< HEAD
             SlugField::new('slug')
                 ->setTargetFieldName('name')
+=======
+            SlugField::new('slug')->setTargetFieldName('name')
+>>>>>>> b29129fec2eb1b2fe4c98912b5d9c2ec6c3e5eb1
         ];
     }
 }
