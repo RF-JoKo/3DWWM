@@ -27,14 +27,6 @@ class Designer
     /**
      * @ORM\Column(type="string", length=255)
      */
-<<<<<<< HEAD
-=======
-    private $slug;
-
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
->>>>>>> b29129fec2eb1b2fe4c98912b5d9c2ec6c3e5eb1
     private $image;
 
     /**
@@ -47,14 +39,11 @@ class Designer
         $this->products = new ArrayCollection();
     }
 
-<<<<<<< HEAD
     public function __toString()
     {
         return $this->getName();
     }
 
-=======
->>>>>>> b29129fec2eb1b2fe4c98912b5d9c2ec6c3e5eb1
     public function getId(): ?int
     {
         return $this->id;
@@ -72,21 +61,6 @@ class Designer
         return $this;
     }
 
-<<<<<<< HEAD
-=======
-    public function getSlug(): ?string
-    {
-        return $this->slug;
-    }
-
-    public function setSlug(string $slug): self
-    {
-        $this->slug = $slug;
-
-        return $this;
-    }
-
->>>>>>> b29129fec2eb1b2fe4c98912b5d9c2ec6c3e5eb1
     public function getImage(): ?string
     {
         return $this->image;
