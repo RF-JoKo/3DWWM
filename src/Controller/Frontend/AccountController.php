@@ -34,17 +34,20 @@ class AccountController extends AbstractController
 
         if($form->isSubmitted() && $form->isValid())
         {
-            $current_pwd = $form->get('current_password')->getData();
+            $current_pwd = $form->get('current_password')
+                                ->getData();
 
             if($crypter->isPasswordValid($user, $current_pwd))
             {
-                $new_pwd = $form->get('new_password')->getData();
+                $new_pwd = $form->get('new_password')
+                                ->getData();
 
                 $password = $crypter->hashPassword($user, $new_pwd);
 
                 $user->setPassword($password);
 
-                $manager = $this->getDoctrine()->getManager();
+                $manager = $this->getDoctrine()
+                                ->getManager();
 
                 $manager->flush();
 

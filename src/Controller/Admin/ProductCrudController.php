@@ -22,13 +22,19 @@ class ProductCrudController extends AbstractCrudController
     {
         return [
             TextField::new('name'),
-            SlugField::new('slug')->setTargetFieldName('name'),
+            SlugField::new('slug')
+                ->setTargetFieldName('name'),
             AssociationField::new('designer'),
-            ImageField::new('image')->setUploadDir('public/assets/img'),
+            ImageField::new('image')
+                ->setBasePath('uploads/products')
+                ->setUploadDir('public/uploads/products')
+                ->setUploadedFileNamePattern('[randomhash].[extension]')
+                ->setRequired(false),
             TextareaField::new('description'),
             AssociationField::new('category'),
             TextField::new('size'),
-            MoneyField::new('price')->setCurrency('EUR')
+            MoneyField::new('price')
+                ->setCurrency('EUR')
         ];
     }
 }
