@@ -1,3 +1,14 @@
+html
+{
+    height: 100%;
+}
+
+body
+{
+    min-height: 100%;
+    position: relative;
+}
+
 .navbar-item-custom
 {
     color: #FFFFFF;
@@ -7,13 +18,8 @@
 {
     bottom: 0;
     width: 100%;
-    position: fixed;
     padding-top: 25px;
+    position: absolute;
     text-align: center;
     background-color: #FFFFFF;
-}
-
-.price
-{
-    font-weight: bold;
 }
