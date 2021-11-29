@@ -20,32 +20,32 @@ class ProductRepository extends ServiceEntityRepository
         parent::__construct($registry, Product::class);
     }
 
-    public function findWithSearch(ProductSearch $search): array
+    public function findWithSearch(ProductSearch $criteria): array
     {
         $builder = $this
             ->createQueryBuilder('product');
 
-        if(null !== $search->name && !empty($search->name))
+        if(null !== $criteria->name && !empty($criteria->name))
         {
             $builder = $builder
             ->andWhere('product.name LIKE :name')
-            ->setParameter('name', "%{$search->name}%");
+            ->setParameter('name', "%{$criteria->name}%");
         }
 
-        if(null !== $search->designer)
+        if(null !== $criteria->designer)
         {
             $builder = $builder
             ->leftJoin('product.designer', 'designer')
             ->andWhere('designer.id = :designer')
-            ->setParameter('designer', $search->designer);
+            ->setParameter('designer', $criteria->designer);
         }
 
-        if(null !== $search->category)
+        if(null !== $criteria->category)
         {
             $builder = $builder
             ->leftJoin('product.category', 'category')
             ->andWhere('category.id = :category')
-            ->setParameter('category', $search->category);
+            ->setParameter('category', $criteria->category);
         }
 
         return $builder

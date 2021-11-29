@@ -15,7 +15,7 @@
             <p class="card-text">{{ product.description() }}</p>
             <p class="card-text">Taille du modèle (mm) : {{ product.size() }}</p>
             <p class="card-text">Catégorie : {{ product.category.name() }}</p>
-            <a href="#" class="btn btn-primary">Ajouter au panier</a>
+            <a href="{{ path('app_frontend_cart_index', {id: product.id()}) }}" class="btn btn-primary">Ajouter au panier</a>
         </div>
     </div>
 {% endblock %}
