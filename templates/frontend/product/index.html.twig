@@ -12,11 +12,11 @@
             {% for product in products %}
                 <div class="card" style="width: 19rem; margin-top: 17px">
                     <div class="product-item">
-                        <a href="{{ path('app_frontend_product_display', {slug: product.slug()}) }}"><img class="card-img-top" src="/uploads/products/{{ product.image() }}" alt="{{ product.name() }}"></a>
+                        <a href="{{ path('app_frontend_product_display', {slug: product.slug}) }}"><img class="card-img-top" src="/uploads/products/{{ product.image }}" alt="{{ product.name }}"></a>
                         <div class="card-body">
-                            <h5 class="card-title">{{ product.name() }}</h5>
-                            <p class="card-text">par <a href="#">{{ product.designer.name() }}</a></p>
-                            <p class="card-text">{{ (product.price() / 100) | number_format(2, ',', '.') }}€</p>
+                            <h5 class="card-title">{{ product.name }}</h5>
+                            <p class="card-text">par <a href="#">{{ product.designer.name }}</a></p>
+                            <p class="card-text">{{ (product.price / 100) | number_format(2, ',', '.') }}€</p>
                         </div>
                     </div>
                 </div>
