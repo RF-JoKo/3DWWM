@@ -1,6 +1,8 @@
 <?php
 
-namespace App\Controller\Frontend;
+declare(strict_types=1);
+
+namespace App\Controller\Frontend\Account\Password;
 
 use App\Form\Frontend\ModifyPasswordType;
 use Symfony\Component\HttpFoundation\Request;
@@ -9,20 +11,12 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 
-class AccountController extends AbstractController
+class AccountPasswordController extends AbstractController
 {
     /**
-     * @Route("/compte", name="app_frontend_account_index")
+     * @Route("/compte/modifier-mot-de-passe", name="app_frontend_account_password_modify")
      */
-    public function index(): Response
-    {
-        return $this->render('frontend/account/index.html.twig');
-    }
-
-    /**
-     * @Route("/compte/modifier-mot-de-passe", name="app_frontend_account_modifyPassword")
-     */
-    public function modifyPassword(Request $request, UserPasswordHasherInterface $crypter): Response
+    public function modify(Request $request, UserPasswordHasherInterface $crypter): Response
     {
         $notification = null;
 
@@ -59,7 +53,7 @@ class AccountController extends AbstractController
             }
         }
 
-        return $this->render('frontend/account/modifyPassword.html.twig', [
+        return $this->render('frontend/account/password/modify.html.twig', [
             'form' => $form->createView(),
             'notification' => $notification
         ]);

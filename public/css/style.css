@@ -1,11 +1,5 @@
-html
-{
-    height: 100%;
-}
-
 body
 {
-    min-height: 100%;
     position: relative;
 }
 
@@ -16,7 +10,6 @@ body
 
 .footer-custom
 {
-    bottom: 0;
     width: 100%;
     padding-top: 25px;
     position: absolute;

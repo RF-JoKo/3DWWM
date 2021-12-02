@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Adresses | 3DWWM{% endblock %}
+
+{% block content %}
+    <h1>MES ADRESSES</h1>
+
+    <a href="{{ path('app_frontend_account_index') }}">Retourner à mon compte</a>
+    <br>
+    {% if app.user.addresses|length == 0 %}
+        <p class="text-center">Veuillez ajouter une adresse.</p>
+    {% else %}
+        <div class="d-flex justify-content-around row g-0" style="margin-bottom: 25px">
+            {% for address in app.user.addresses %}
+                <div class="card" style="width: 19rem; margin-top: 17px">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ address.name }}</h5>
+                        <p class="card-text">
+                            {{ address.address }}
+                            <br>
+                            {{ address.postal }} {{ address.city }}
+                            <br>
+                            {{ address.country }}
+                            <br>
+                            <a href="{{ path('app_frontend_account_address_update', {id: address.id}) }}">Modifier</a> | <a href="{{ path('app_frontend_account_address_delete', {id: address.id}) }}">Supprimer</a>
+                        </p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+    <a href="{{ path('app_frontend_account_address_add') }}" class="btn btn-block btn-primary">Ajouter une adresse</a>
+{% endblock %}

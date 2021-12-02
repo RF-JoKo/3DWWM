@@ -95,7 +95,7 @@ class CartController extends AbstractController
 
         if(!empty($cart[$id]))
         {
-                unset($cart[$id]);
+            unset($cart[$id]);
         }
 
         $session->set("cart", $cart);
