@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller\Admin;
+namespace App\Controller\Admin\CRUD;
 
 use App\Entity\Category;
 use EasyCorp\Bundle\EasyAdminBundle\Field\SlugField;

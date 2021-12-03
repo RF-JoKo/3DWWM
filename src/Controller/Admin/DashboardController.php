@@ -3,9 +3,10 @@
 namespace App\Controller\Admin;
 
 use App\Entity\User;
-use App\Entity\Designer;
-use App\Entity\Category;
+use App\Entity\Carrier;
 use App\Entity\Product;
+use App\Entity\Category;
+use App\Entity\Designer;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
@@ -35,5 +36,6 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToCrud('Designers', 'fas fa-pencil-ruler', Designer::class);
         yield MenuItem::linkToCrud('Categories', 'fas fa-list', Category::class);
         yield MenuItem::linkToCrud('Products', 'fas fa-tags', Product::class);
+        yield MenuItem::linkToCrud('Carriers', 'fas fa-truck', Carrier::class);
     }
 }

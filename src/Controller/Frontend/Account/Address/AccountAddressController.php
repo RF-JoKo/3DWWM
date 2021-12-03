@@ -47,7 +47,7 @@ class AccountAddressController extends AbstractController
             return $this->redirectToRoute('app_frontend_account_address_index');
         }
 
-        return $this->render('frontend/account/address/form.html.twig', [
+        return $this->render('frontend/account/address/add.html.twig', [
             'form' => $form->createView()
         ]);
     }
@@ -78,7 +78,7 @@ class AccountAddressController extends AbstractController
             return $this->redirectToRoute('app_frontend_account_address_index');
         }
 
-        return $this->render('frontend/account/address/form.html.twig', [
+        return $this->render('frontend/account/address/update.html.twig', [
             'form' => $form->createView()
         ]);
     }

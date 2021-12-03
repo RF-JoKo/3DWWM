@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller\Admin;
+namespace App\Controller\Admin\CRUD;
 
 use App\Entity\Designer;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
