@@ -3,10 +3,12 @@
 namespace App\Form\Frontend;
 
 use App\Entity\Address;
+use App\Entity\Carrier;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
 class OrderType extends AbstractType
 {
@@ -23,7 +25,19 @@ class OrderType extends AbstractType
                 'multiple' => false,
                 'expanded' => true
             ])
-        ;
+            ->add('carriers', EntityType::class, [
+                'label' => 'Mode de livraison :',
+                'required' => true,
+                'class' => Carrier::class,
+                'placeholder' => 'Transporteur',
+                'choice_value' => 'name'
+            ])
+            ->add('submit', SubmitType::class, [
+                'label' => 'Passer au paiement',
+                'attr' => [
+                    'class' => 'btn-block btn-primary'
+                ]
+            ]);
     }
 
     public function configureOptions(OptionsResolver $resolver): void

@@ -15,7 +15,17 @@
             {{ formHtml|replace({'[br]' : '<br/>'})|raw }}
         </div>
         <div class="col-md-6">
-        
+            <p>Récapitulatif de ma commande :</p>
+            {% for element in cart %}
+                <div class="row">
+                    <div class="col-8">
+                        {{ element.product.name }}
+                    </div>
+                    <div class="col-4">
+                        x{{ element.quantity }}
+                    </div>
+                </div>
+            {% endfor %}
         </div>
     </div>
 {% endblock %}
