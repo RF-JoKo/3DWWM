@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Controller\Frontend\Account\Address;
 
+use App\DTO\Cart;
 use App\Entity\Address;
 use App\Form\Frontend\AddressType;
 use App\Repository\AddressRepository;
@@ -25,7 +26,7 @@ class AccountAddressController extends AbstractController
     /**
      * @Route("/compte/ajouter-adresse", name="app_frontend_account_address_add")
      */
-    public function add(Request $request): Response
+    public function add(Cart $cart, Request $request): Response
     {
         $address = new Address();
 
@@ -44,7 +45,14 @@ class AccountAddressController extends AbstractController
 
             $manager->flush();
 
-            return $this->redirectToRoute('app_frontend_account_address_index');
+            if($cart->get())
+            {
+                return $this->redirectToRoute('app_frontend_order_index');
+            }
+            else
+            {
+                return $this->redirectToRoute('app_frontend_account_address_index');
+            }
         }
 
         return $this->render('frontend/account/address/add.html.twig', [
