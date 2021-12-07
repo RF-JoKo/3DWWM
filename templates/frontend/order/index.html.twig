@@ -1,21 +1,24 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Commander | 3DWWM{% endblock %}
+{% block title %}Informations commande | 3DWWM{% endblock %}
 
 {% block content %}
-    <h1>COMMANDER</h1>
+    <h1>INFORMATIONS COMMANDE</h1>
 
     <div class="row">
         <div class="col-md-6">
             <p>Adresse de livraison :</p>
             {% set formHtml %}
-                {{ form(form) }}
+                {{ form_start(form, {action:path('app_frontend_order_add')}) }}
+                    {{ form_label(form.addresses, 'Adresse de livraison') }}
+                    <a href="{{ path('app_frontend_account_address_add') }}">Ajouter une adresse</a>
+                {{ form_end(form) }}
             {% endset %}
 
             {{ formHtml|replace({'[br]' : '<br/>'})|raw }}
         </div>
         <div class="col-md-6">
-            <p>Récapitulatif de ma commande :</p>
+            <p>Détail de ma commande :</p>
             {% for element in cart %}
                 <div class="row">
                     <div class="col-8">

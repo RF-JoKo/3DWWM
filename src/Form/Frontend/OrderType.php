@@ -33,7 +33,7 @@ class OrderType extends AbstractType
                 'choice_value' => 'name'
             ])
             ->add('submit', SubmitType::class, [
-                'label' => 'Passer au paiement',
+                'label' => 'Valider la commande',
                 'attr' => [
                     'class' => 'btn-block btn-primary'
                 ]
