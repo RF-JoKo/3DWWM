@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Paiement | 3DWWM{% endblock %}
+
+{% block content %}
+    <h1>PAIEMENT</h1>
+
+    {# {{ form(form) }} #}
+    {{ form_start(form) }}
+        <div class="row">
+            <div class="col-md-12">{{ form_row(form.name) }}</div>
+            <div class="col-md-12">{{ form_row(form.number) }}</div>
+            <div class="col-md-4">{{ form_row(form.expiryMonth) }}</div>
+            <div class="col-md-4">{{ form_row(form.expiryYear) }}</div>
+            <div class="col-md-4">{{ form_row(form.cryptogram) }}</div>
+        </div>
+    {{ form_end(form) }}
+{% endblock %}

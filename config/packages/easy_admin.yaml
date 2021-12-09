@@ -1,5 +1,6 @@
 easy_admin:
   entities:
+    - App\Entity\Order
     - App\Entity\User
     - App\Entity\Designer
     - App\Entity\Category

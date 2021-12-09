@@ -6,6 +6,7 @@ use App\DTO\Cart;
 use App\Entity\Order;
 use App\Entity\OrderDetails;
 use App\Form\Frontend\OrderType;
+use App\Form\Frontend\CreditCardType;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -60,10 +61,10 @@ class OrderController extends AbstractController
             $delivery = $form->get('addresses')
                              ->getData();
             $delivery_content = $delivery->getFirstname().' '.$delivery->getLastname();
-            $delivery_content .= '<br/>'.$delivery->getPhone();
             $delivery_content .= '<br/>'.$delivery->getAddress();
             $delivery_content .= '<br/>'.$delivery->getPostal().' '.$delivery->getCity();
             $delivery_content .= '<br/>'.$delivery->getCountry();
+            $delivery_content .= '<br/>'.$delivery->getPhone();
 
             //Register my order : Order
             $order = new Order();
@@ -99,5 +100,17 @@ class OrderController extends AbstractController
         }
 
         return $this->redirectToRoute('app_frontend_cart_index');
+    }
+
+    /**
+     * @Route("commande/paiement", name="app_frontend_order_pay")
+     */
+    public function pay(): Response
+    {
+        $form = $this->createForm(CreditCardType::class);
+
+        return $this->render('frontend/order/pay.html.twig', [
+            'form' => $form->createView()
+        ]);
     }
 }
