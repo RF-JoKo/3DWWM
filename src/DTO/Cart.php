@@ -40,4 +40,9 @@ class Cart
 
         return $cartComplete;
     }
+
+    public function remove()
+    {
+        return $this->session->remove('cart');
+    }
 }

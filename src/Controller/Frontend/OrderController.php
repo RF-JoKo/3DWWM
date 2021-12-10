@@ -128,9 +128,37 @@ class OrderController extends AbstractController
     /**
      * @Route("/commande/confirmation/{id}", name="app_frontend_order_confirm")
      */
-    public function confirm(Order $order): Response
+    public function confirm(Order $order, Cart $cart): Response
     {
-        return $this->render('frontend/order/confirm.html.twig', [
+        if(!$order || $order->getUser() != $this->getUser())
+        {
+            return $this->redirectToRoute('app_frontend_home_index');
+        }
+
+        if(!$order->getIsPaid())
+        {
+            $cart->remove();
+
+            $order->setIsPaid(1);
+            $this->entityManager->flush();
+        }
+
+        return $this->render('frontend/order/success.html.twig', [
+            'order' => $order
+        ]);
+    }
+
+    /**
+     * @Route("/commande/erreur/{id}", name="app_frontend_order_error")
+     */
+    public function error(Order $order): Response
+    {
+        if(!$order || $order->getUser() != $this->getUser())
+        {
+            return $this->redirectToRoute('app_frontend_home_index');
+        }
+
+        return $this->render('frontend/order/cancel.html.twig', [
             'order' => $order
         ]);
     }
