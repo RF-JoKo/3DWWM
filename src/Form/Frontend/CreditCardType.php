@@ -17,41 +17,48 @@ class CreditCardType extends AbstractType
         $builder
             ->add('name', TextType::class, [
                 'label' => false,
+                'required' => true,
                 'attr' => [
                     'placeholder' => 'Nom du titulaire de la carte'
-                ],
-                'required' => true
+                ]
             ])
             ->add('number', NumberType::class, [
                 'label' => false,
+                'required' => true,
                 'attr' => [
-                    'placeholder' => 'Numéro de carte'
-                ],
-                'required' => true
+                    'placeholder' => 'Numéro de carte',
+                    'pattern' => '[0-9]{16}'
+                ]
             ])
             ->add('expiryMonth', NumberType::class, [
                 'label' => false,
+                'required' => true,
                 'attr' => [
-                    'placeholder' => 'Mois d\'expiration - MM'
-                ],
-                'required' => true
+                    'placeholder' => 'Mois d\'expiration',
+                    'pattern' => '[0-9]{2}'
+                ]
             ])
             ->add('expiryYear', NumberType::class, [
                 'label' => false,
+                'required' => true,
                 'attr' => [
-                    'placeholder' => 'Année d\'expiration - YY'
-                ],
-                'required' => true
+                    'placeholder' => 'Année d\'expiration',
+                    'pattern' => '[0-9]{2}'
+                ]
             ])
             ->add('cryptogram', NumberType::class, [
                 'label' => false,
+                'required' => true,
                 'attr' => [
-                    'placeholder' => 'Cryptogramme de sécurité'
-                ],
-                'required' => true
+                    'placeholder' => 'Cryptogramme',
+                    'pattern' => '[0-9]{3}'
+                ]
             ])
             ->add('submit', SubmitType::class, [
-                'label' => 'Payer'
+                'label' => 'Payer',
+                'attr' => [
+                    'class' => 'btn-block btn-primary'
+                ]
             ])
         ;
     }

@@ -35,7 +35,7 @@
             <p><strong>Total articles : </strong>{{ (total / 100)|number_format(2, ',', '.') }}€</p>
             <p><strong>Livraison : </strong>{{ (carrier.price / 100)|number_format(2, ',', '.') }}€</p>
             <p><strong>Total commande : </strong>{{ ((total / 100) + (carrier.price / 100)) | number_format(2, ',', '.') }}€</p>
-            <a href="{{ path('app_frontend_order_pay') }}" class="btn btn-primary btn-block mt-3">Procéder au paiement</a>
+            <a href="{{ path('app_frontend_order_pay', {id: id}) }}" class="btn btn-primary btn-block mt-3">Procéder au paiement</a>
         </div>
     </div>
 {% endblock %}

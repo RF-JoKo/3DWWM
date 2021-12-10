@@ -23,9 +23,9 @@ class OrderController extends AbstractController
     }
 
     /**
-     * @Route("/commande", name="app_frontend_order_index")
+     * @Route("/commande/livraison", name="app_frontend_order_delivery")
      */
-    public function index(Cart $cart): Response
+    public function delivery(Cart $cart): Response
     {
         if(!$this->getUser()->getAddresses()->getValues())
         {
@@ -36,7 +36,7 @@ class OrderController extends AbstractController
             'user' => $this->getUser()
         ]);
 
-        return $this->render('frontend/order/index.html.twig', [
+        return $this->render('frontend/order/delivery.html.twig', [
             'form' => $form->createView(),
             'cart' => $cart->getFull()
         ]);
@@ -77,7 +77,7 @@ class OrderController extends AbstractController
 
             $this->entityManager->persist($order);
 
-            //Register my order : OrderDetails
+            //Register my products : OrderDetails
             foreach($cart->getFull() as $product)
             {
                 $orderDetails = new OrderDetails();
@@ -90,12 +90,13 @@ class OrderController extends AbstractController
                 $this->entityManager->persist($orderDetails);
             }
 
-            //$this->entityManager->flush();
+            $this->entityManager->flush();
 
             return $this->render('frontend/order/add.html.twig', [
                 'cart' => $cart->getFull(),
                 'carrier' => $carriers,
-                'delivery' => $delivery_content
+                'delivery' => $delivery_content,
+                'id' => $order->getId()
             ]);
         }
 
@@ -103,14 +104,34 @@ class OrderController extends AbstractController
     }
 
     /**
-     * @Route("commande/paiement", name="app_frontend_order_pay")
+     * @Route("/commande/paiement/{id}", name="app_frontend_order_pay")
      */
-    public function pay(): Response
+    public function pay(Request $request, Order $order): Response
     {
         $form = $this->createForm(CreditCardType::class);
 
+        $form->handleRequest($request);
+
+        if($form->isSubmitted() && $form->isValid())
+        {
+            return $this->redirectToRoute('app_frontend_order_confirm', [
+                'id' => $order->getId()
+            ]);
+        }
+
         return $this->render('frontend/order/pay.html.twig', [
-            'form' => $form->createView()
+            'form' => $form->createView(),
+            'order' => $order
+        ]);
+    }
+
+    /**
+     * @Route("/commande/confirmation/{id}", name="app_frontend_order_confirm")
+     */
+    public function confirm(Order $order): Response
+    {
+        return $this->render('frontend/order/confirm.html.twig', [
+            'order' => $order
         ]);
     }
 }

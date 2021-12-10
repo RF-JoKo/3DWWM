@@ -47,7 +47,7 @@ class AccountAddressController extends AbstractController
 
             if($cart->get())
             {
-                return $this->redirectToRoute('app_frontend_order_index');
+                return $this->redirectToRoute('app_frontend_order_delivery');
             }
             else
             {
