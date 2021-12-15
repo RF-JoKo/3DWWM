@@ -2,8 +2,10 @@
 
 namespace App\Controller;
 
-
+use App\Class\Mail;
+use App\Entity\User;
 use App\Form\RegisterType;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -13,11 +15,20 @@ use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 
 class SecurityController extends AbstractController
 {
+    private $entityManager;
+
+    public function __construct(EntityManagerInterface $entityManager)
+    {
+        $this->entityManager = $entityManager;
+    }
+
     /**
      * @Route("/inscription", name="app_register")
      */
     public function register(Request $request, UserPasswordHasherInterface $crypter): Response
     {
+        $notification = null;
+
         $form = $this->createForm(RegisterType::class);
 
         $form->handleRequest($request);
@@ -26,20 +37,37 @@ class SecurityController extends AbstractController
         {
             $user = $form->getData();
 
-            $user->setPassword($crypter->hashPassword($user, $user->getPassword()));
+            $search_email = $this->entityManager->getRepository(User::class)
+                                                ->findOneByEmail($user->getEmail());
 
-            $manager = $this->getDoctrine()
-                            ->getManager();
+            if(!$search_email)
+            {
+                $user->setPassword($crypter->hashPassword($user, $user->getPassword()));
 
-            $manager->persist($user);
+                $manager = $this->getDoctrine()
+                                ->getManager();
 
-            $manager->flush();
+                $manager->persist($user);
 
-            return $this->redirectToRoute('app_login');
+                $manager->flush();
+
+                $mail = new Mail();
+
+                $content = "Bonjour".$user->getFirstname()."<br>Bienvenue sur 3DWWM, le spécialiste de l'impression 3D pour tous !<br><br>Votre inscription a bien été prise en compte, vous pouvez désormais vous connecter à votre compte.<br><br>À bientôt !";
+
+                $mail->send($user->getEmail(), $user->getFirstname(), 'Bienvenue sur 3DWWM', $content);
+
+                return $this->redirectToRoute('app_login');
+            }
+            else
+            {
+                $notification = "L'email renseigné existe déjà.";
+            }
         }
         
         return $this->render('security/register.html.twig', [
-            'form' => $form->createView()
+            'form' => $form->createView(),
+            'notification' => $notification
         ]);
     }
 

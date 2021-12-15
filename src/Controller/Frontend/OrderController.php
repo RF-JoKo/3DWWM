@@ -2,7 +2,8 @@
 
 namespace App\Controller\Frontend;
 
-use App\DTO\Cart;
+use App\Class\Cart;
+use App\Class\Mail;
 use App\Entity\Order;
 use App\Entity\OrderDetails;
 use App\Form\Frontend\OrderType;
@@ -141,6 +142,12 @@ class OrderController extends AbstractController
 
             $order->setIsPaid(1);
             $this->entityManager->flush();
+
+            $mail = new Mail();
+
+            $content = "Bonjour".$order->getUser()->getFirstname()."<br>Merci pour votre commande chez 3DWWM, le spécialiste de l'impression 3D pour tous !<br><br>Votre commande a bien été prise en compte, vous pouvez désormais vous connecter à votre compte pour suivre sa progression.<br><br>À bientôt !";
+
+            $mail->send($order->getUser()->getEmail(), $order->getUser()->getFirstname(), 'Validation commande 3DWWM', $content);
         }
 
         return $this->render('frontend/order/success.html.twig', [

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\DTO;
+namespace App\Class;
 
 use App\Entity\Product;
 use Doctrine\ORM\EntityManagerInterface;

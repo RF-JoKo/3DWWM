@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Controller\Frontend\Account\Address;
 
-use App\DTO\Cart;
+use App\Class\Cart;
 use App\Entity\Address;
 use App\Form\Frontend\AddressType;
 use App\Repository\AddressRepository;
