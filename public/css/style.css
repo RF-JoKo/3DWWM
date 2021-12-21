@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* BODY */
+body
+{
+    background: linear-gradient(90deg, #3E4044 0%, #28292F 100%);
+}
+
+.flex
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section
+{
+    margin: auto;
+    height: 100vh;
+    color: #F5F5F5;
+    width: min(1196px, 100%);
+}
+
+img
+{
+    border-radius: 6px;
+}
+
+.title
+{
+    font-size: 39px;
+    font-weight: 300;
+    margin: 100px 0 25px;
+}
+
+.title::before
+{
+    content: "";
+    width: 150px;
+    height: 10px;
+    display: block;
+    margin-bottom: 8px;
+    border-radius: 30px;
+    background: #89FFFD;
+}
+
+/* HEADER */
+header
+{
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    position: fixed;
+    padding: 10px 20px;
+}
+
+header a
+{
+    color: #F5F5F5;
+    text-decoration: none;
+}
+
+header span
+{
+    color: #89FFFD;
+}
+
+header nav
+{
+    gap: 25px;
+}
+
+header nav a:hover
+{
+    color: #89FFFD;
+}
+/* HEADER */
+
+/* FOOTER */
+footer
+{
+    width: 100%;
+    padding: 25px;
+    color: #F5F5F5;
+    position: absolute;
+    text-align: center;
+}
+
+footer a
+{
+    color: #89FFFD;
+    text-decoration: none;
+}
+/* FOOTER */
+
+/* BODY */
+
+/* ---------- HOME ----------> index.html.twig <---------- */
+
+/* 3D printer video */
+video
+{
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+}
+/* 3D printer video */
+
+.title-home
+{
+    font-size: 64px;
+    font-weight: 300;
+    margin-top: 25px;
+}
+
+.title-home::before
+{
+    content: "";
+    width: 150px;
+    height: 10px;
+    display: block;
+    margin-bottom: 8px;
+    border-radius: 30px;
+    background: #89FFFD;
+}
+
+/* Best sellers */
+.best-sellers
+{
+    padding-top: 50px;
+}
+
+.cards-best
+{
+    margin: 25px 0;
+}
+
+.card-best-body
+{
+    margin-top: 5px;
+    position: relative;
+}
+
+.card-best-body h3
+{
+    font-weight: 300;
+}
+
+.card-best-body a
+{
+    color: #89FFFD;
+    text-decoration: none;
+}
+
+.card-best-body span
+{
+    top: 0;
+    right: 0;
+    font-size: 18px;
+    font-weight: 300;
+    position: absolute;
+}
+
+.visit-shop
+{
+    margin-top: 60px;
+    text-align: center;
+}
+
+.visit-shop a
+{
+    border: none;
+    font-size: 18px;
+    font-weight: 300;
+    color: #3E4044;
+    border-radius: 6px;
+    padding: 15px 20px;
+    text-decoration: none;
+    background: #89FFFD;
+}
+/* Best sellers */
+
+/* Who are we ? */
+.who-are-we p
+{
+    margin-top: 20px;
+}
+/* Who are we ? */
+
+/* ---------- HOME ----------> index.html.twig <---------- */
+
+
+/* ---------- SECURITY ----------> login.html.twig <---------- */
+.form-login
+{
+    width: 50%;
+    margin: 0 auto;
+    padding: 50px 25px;
+    border-radius: 6px;
+    background: rgba(245, 245, 245, .8);
+}
+
+.form-login label
+{
+    font-size: 18px;
+    color: #3E4044;
+}
+
+.form-login input
+{
+    border: none;
+    width: 300px;
+    padding: 5px;
+    border-radius: 6px;
+}
+
+.login
+{
+    text-align: center;
+}
+
+.login button
+{
+    border: none;
+    font-size: 18px;
+    font-weight: 300;
+    color: #3E4044;
+    margin-top: 25px;
+    border-radius: 6px;
+    padding: 15px 20px;
+    text-decoration: none;
+    background: #89FFFD;
+}
+
+.redirection-register
+{
+    margin-top: 25px;
+    text-align: center;
+}
+
+.redirection-register a
+{
+    color: #89FFFD;
+    text-decoration: none;
+}
+/* ---------- SECURITY ----------> login.html.twig <---------- */
+
+
+/* ---------- SECURITY ----------> register.html.twig <---------- */
+.form-register
+{
+    width: 50%;
+    margin: 0 auto;
+    padding: 50px 25px;
+    border-radius: 6px;
+    background: rgba(245, 245, 245, .8);
+}
+/* ---------- SECURITY ----------> register.html.twig <---------- */

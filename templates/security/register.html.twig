@@ -3,12 +3,41 @@
 {% block title %}Inscription | 3DWWM{% endblock %}
 
 {% block content %}
-    <h1>CRÉEZ VOTRE COMPTE</h1>
-
-    {% if notification %}
-        <div class="alert alert-info">{{ notification }}</div>
-        <hr>
-    {% endif %}
-
-    {{ form(form) }}
+    <section>
+        <h1 class="title">CRÉEZ VOTRE COMPTE</h1>
+        <div class="form-register">
+            {% if notification %}
+                <div>{{ notification }}</div>
+                <hr>
+            {% endif %}
+            {{ form_start(form) }}
+            <div class="flex">
+                <div>
+                    {{ form_label(form.firstname) }}
+                    <br>
+                    <br>
+                    {{ form_label(form.lastname) }}
+                    <br>
+                    <br>
+                    {{ form_label(form.email) }}
+                    <br>
+                    <br>
+                    {{ form_label(form.password) }}
+                </div>
+                <div>
+                    {{ form_widget(form.firstname) }}
+                    <br>
+                    <br>
+                    {{ form_widget(form.lastname) }}
+                    <br>
+                    <br>
+                    {{ form_widget(form.email) }}
+                    <br>
+                    <br>
+                    {{ form_widget(form.password) }}
+                </div>
+            </div>
+            {{ form_end(form) }}
+        </div>
+    </section>
 {% endblock %}

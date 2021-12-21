@@ -7,7 +7,7 @@
     <title>{% block title %}3DWWM | L'impression 3D à tout instant...{% endblock %}</title>
     <link rel="icon" href="{{ asset('images/logo.png') }}">
     {% block stylesheets %}
-        <link rel="stylesheet" href="{{ asset('css/my.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     {% endblock %}
 </head>
 
@@ -15,7 +15,7 @@
     
     {# HEADER #}
     <header class="flex">
-        <a href="{{ path('app_frontend_home_index') }}"><h1><span class="logo">3D</span>WWM</h1></a>
+        <a href="{{ path('app_frontend_home_index') }}"><h1><span>3D</span>WWM</h1></a>
         <nav class="flex">
             <a href="{{ path('app_frontend_product_index') }}">Boutique</a>
             <a href="{{ path('app_frontend_cart_index') }}">Panier ({{ app.session.get('cart')|length }})</a>
@@ -31,6 +31,24 @@
     {# CONTENT #}
     {% block content %}{% endblock %}
     {# CONTENT #}
+
+    <hr>
+
+    {# FOOTER #}
+    <footer>
+        <p>
+            &copy; 2022 3DWWM
+            <br>
+            <small>
+                L'impression 3D à tout instant...
+                <br>
+                <div>
+                    <a href="#">Mentions légales</a> &middot; <a href="#">Politiques de confidentialité</a>
+                </div>
+            </small>
+        </p>
+    </footer>
+    {# FOOTER #}
 
 </body>
 </html>

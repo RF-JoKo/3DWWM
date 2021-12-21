@@ -19,37 +19,28 @@ class RegisterType extends AbstractType
     {
         $builder
         ->add('firstname', TextType::class, [
-            'label' => false,
-            'attr' => [
-                'placeholder' => 'Prénom'
-            ]
+            'label' => 'PRÉNOM'
         ])
         ->add('lastname', TextType::class, [
-            'label' => false,
-            'attr' => [
-                'placeholder' => 'Nom de famille'
-            ]
+            'label' => 'NOM DE FAMILLE'
         ])
         ->add('email', EmailType::class, [
-            'label' => false,
-            'attr' => [
-                'placeholder' => 'E-mail'
-            ]
+            'label' => 'E-MAIL'
         ])
         ->add('password', RepeatedType::class, [
             'type' => PasswordType::class,
-            'first_options' => ['label' => false,
+            'first_options' => ['label' => 'MOT DE PASSE',
                                 'attr' => [
-                                    'placeholder' => 'Mot de passe - 6 caractères minimum'
+                                    'placeholder' => '6 caractères minimum'
                                 ],
                                 'constraints' => new Length(['min' => 6,
                                                              'minMessage' => 'Votre mot de passe doit contenir au minimum 6 caractères',
                                                              'max' =>255
                                 ])
             ],
-            'second_options' => ['label' => false,
+            'second_options' => ['label' => 'RÉPÉTEZ LE MOT DE PASSE',
                                  'attr' => [
-                                     'placeholder' => 'Confirmation mot de passe'
+                                     'placeholder' => '6 caractères minimum'
                                  ]
             ],
             'invalid_message' => 'Mots de passe différents'
