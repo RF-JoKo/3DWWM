@@ -61,7 +61,7 @@ class SecurityController extends AbstractController
             }
             else
             {
-                $notification = "L'email renseigné existe déjà.";
+                $notification = "Erreur : l'email renseigné existe déjà.";
             }
         }
         

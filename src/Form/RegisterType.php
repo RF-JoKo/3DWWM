@@ -19,34 +19,48 @@ class RegisterType extends AbstractType
     {
         $builder
         ->add('firstname', TextType::class, [
-            'label' => 'PRÉNOM'
+            'label' => 'PRÉNOM',
+            'attr' => [
+                'class' => 'input-register'
+            ]
         ])
         ->add('lastname', TextType::class, [
-            'label' => 'NOM DE FAMILLE'
+            'label' => 'NOM DE FAMILLE',
+            'attr' => [
+                'class' => 'input-register'
+            ]
         ])
         ->add('email', EmailType::class, [
-            'label' => 'E-MAIL'
+            'label' => 'E-MAIL',
+            'attr' => [
+                'class' => 'input-register'
+            ]
         ])
         ->add('password', RepeatedType::class, [
             'type' => PasswordType::class,
-            'first_options' => ['label' => 'MOT DE PASSE',
+            'first_options' => ['label' => false,
                                 'attr' => [
-                                    'placeholder' => '6 caractères minimum'
+                                    'placeholder' => '6 caractères minimum',
+                                    'class' => 'input-register'
                                 ],
                                 'constraints' => new Length(['min' => 6,
-                                                             'minMessage' => 'Votre mot de passe doit contenir au minimum 6 caractères',
-                                                             'max' =>255
+                                                             'minMessage' => ': votre mot de passe doit contenir au minimum 6 caractères.',
+                                                             'max' => 255
                                 ])
             ],
-            'second_options' => ['label' => 'RÉPÉTEZ LE MOT DE PASSE',
+            'second_options' => ['label' => 'CONFIRMEZ MOT DE PASSE',
                                  'attr' => [
-                                     'placeholder' => '6 caractères minimum'
+                                     'placeholder' => 'Répétez le mot de passe',
+                                     'class' => 'input-register'
                                  ]
             ],
-            'invalid_message' => 'Mots de passe différents'
+            'invalid_message' => ': mots de passe différents.',
         ])
         ->add('submit', SubmitType::class, [
-            'label' => 'Inscription'
+            'label' => 'Inscription',
+            'attr' => [
+                'class' => 'button-register'
+            ]
         ]);
     }
 

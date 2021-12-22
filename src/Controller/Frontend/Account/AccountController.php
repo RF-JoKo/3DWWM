@@ -9,7 +9,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class AccountController extends AbstractController
 {
     /**
-     * @Route("/compte", name="app_frontend_account_index")
+     * @Route("/mon-compte", name="app_frontend_account_index")
      */
     public function index(): Response
     {

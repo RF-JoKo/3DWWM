@@ -7,10 +7,6 @@
         <h1 class="title">CONNECTEZ-VOUS À VOTRE COMPTE</h1>
         <div class="form-login">
             <form method="post">
-                {% if error %}
-                    <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-                {% endif %}
-            
                 {% if app.user %}
                     <div>
                         You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
@@ -50,6 +46,10 @@
                 <div class="login">
                     <button type="submit">Connexion</button>
                 </div>
+
+                {% if error %}
+                    <div class="login-error">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                {% endif %}
             </form>
         </div>
         <div class="redirection-register">

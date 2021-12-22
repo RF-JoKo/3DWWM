@@ -1,13 +1,23 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Compte | 3DWWM{% endblock %}
+{% block title %}Mon compte | 3DWWM{% endblock %}
 
 {% block content %}
-    <h1>MON COMPTE</h1>
-
-    - <a href="{{ path('app_frontend_account_password_modify') }}">Modifier mon mot de passe</a>
-    <br>
-    - <a href="{{ path('app_frontend_account_address_index') }}">Gérer mes adresses</a>
-    <br>
-    - <a href="{{ path('app_frontend_account_order_index') }}">Voir mes commandes</a>
+    <section>
+        <h1 class="title">MON COMPTE</h1>
+        <div class="flex cards-account">
+            <div class="card-account flex">
+                <p>MOT DE PASSE</p>
+                <a href="{{ path('app_frontend_account_password_modify') }}">Modifier</a>
+            </div>
+            <div class="card-account flex">
+                <p>ADRESSES</p>
+                <a href="{{ path('app_frontend_account_address_index') }}">Gérer</a>
+            </div>
+            <div class="card-account flex">
+                <p>COMMANDES</p>
+                <a href="{{ path('app_frontend_account_order_index') }}">Voir</a>
+            </div>
+        </div>
+    </section>
 {% endblock %}

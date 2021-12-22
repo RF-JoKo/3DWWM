@@ -38,7 +38,7 @@ img
 {
     font-size: 39px;
     font-weight: 300;
-    margin: 100px 0 25px;
+    margin: 75px 0 25px;
 }
 
 .title::before
@@ -104,7 +104,7 @@ footer a
 
 /* BODY */
 
-/* ---------- HOME ----------> index.html.twig <---------- */
+/* ---------- FRONTEND/HOME ----------> index.html.twig <---------- */
 
 /* 3D printer video */
 video
@@ -145,6 +145,7 @@ video
 .cards-best
 {
     margin: 25px 0;
+    justify-content: space-around;
 }
 
 .card-best-body
@@ -199,7 +200,58 @@ video
 }
 /* Who are we ? */
 
-/* ---------- HOME ----------> index.html.twig <---------- */
+/* ---------- FRONTEND/HOME ----------> index.html.twig <---------- */
+
+
+/* ---------- SECURITY ----------> register.html.twig <---------- */
+.form-register
+{
+    width: 50%;
+    margin: 0 auto;
+    padding: 50px 25px;
+    border-radius: 6px;
+    background: rgba(245, 245, 245, .5);
+}
+
+.register-error
+{
+    color: #FF0000;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.register label
+{
+    font-size: 18px;
+    color: #F5F5F5;
+}
+
+.input-register
+{
+    border: none;
+    width: 300px;
+    padding: 5px;
+    border-radius: 6px;
+}
+
+.button-register
+{
+    border: none;
+    font-size: 18px;
+    font-weight: 300;
+    color: #3E4044;
+    margin-top: 25px;
+    border-radius: 6px;
+    padding: 15px 20px;
+    text-decoration: none;
+    background: #89FFFD;
+}
+
+.center-register
+{
+    text-align: center;
+}
+/* ---------- SECURITY ----------> register.html.twig <---------- */
 
 
 /* ---------- SECURITY ----------> login.html.twig <---------- */
@@ -209,13 +261,13 @@ video
     margin: 0 auto;
     padding: 50px 25px;
     border-radius: 6px;
-    background: rgba(245, 245, 245, .8);
+    background: rgba(245, 245, 245, .5);
 }
 
 .form-login label
 {
     font-size: 18px;
-    color: #3E4044;
+    color: #F5F5F5;
 }
 
 .form-login input
@@ -224,6 +276,13 @@ video
     width: 300px;
     padding: 5px;
     border-radius: 6px;
+}
+
+.login-error
+{
+    color: #FF0000;
+    text-align: center;
+    margin-top: 25px;
 }
 
 .login
@@ -258,13 +317,49 @@ video
 /* ---------- SECURITY ----------> login.html.twig <---------- */
 
 
-/* ---------- SECURITY ----------> register.html.twig <---------- */
-.form-register
+/* ---------- FRONTEND/ACCOUNT ----------> index.html.twig <---------- */
+.cards-account
 {
-    width: 50%;
-    margin: 0 auto;
-    padding: 50px 25px;
-    border-radius: 6px;
-    background: rgba(245, 245, 245, .8);
+    height: auto;
+    min-height: 483.15px;
+    justify-content: space-around;
 }
-/* ---------- SECURITY ----------> register.html.twig <---------- */
+
+.cards-account .flex
+{
+    margin: 0;
+}
+
+.card-account
+{
+    width: 250px;
+    height: 400px;
+    padding: 25px 0;
+    border-radius: 6px;
+    flex-direction: column;
+    background: rgba(245, 245, 245, .5);
+}
+
+.card-account p
+{
+    font-size: 18px;
+    font-weight: 300;
+    color: #F5F5F5;
+}
+
+.card-account a
+{
+    color: #89FFFD;
+    text-decoration: none;
+}
+
+.card-account:first-child
+{
+    align-self: flex-end;
+}
+
+.card-account:last-child
+{
+    align-self: flex-start;
+}
+/* ---------- FRONTEND/ACCOUNT ----------> index.html.twig <---------- */
