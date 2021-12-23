@@ -1,35 +1,39 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Commandes | 3DWWM{% endblock %}
+{% block title %}Mes commandes | 3DWWM{% endblock %}
 
 {% block content %}
-    <h1>MES COMMANDES</h1>
-    <a href="{{ path('app_frontend_account_index') }}">Retourner à mon compte</a>
-    <br>
-    {% if orders|length == 0 %}
-        <p class="text-center">Vous n'avez pas encore commandé.</p>
-    {% else %}
-        <table class="table mt-3">
-            <thead>
-                <tr>
-                    <th scop="col">N° de commande</th>
-                    <th scop="col">Date de commande</th>
-                    <th scop="col">Produit(s)</th>
-                    <th scop="col">Montant total</th>
-                    <th scop="col"></th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for order in orders %}
+    <section>
+        <h1 class="title">MES COMMANDES</h1>
+        <div class="center">
+            <a href="{{ path('app_frontend_account_index') }}" class="link">Retourner à mon compte</a>
+        </div>
+        <br>
+        {% if orders|length == 0 %}
+            <p>Vous n'avez pas encore commandé.</p>
+        {% else %}
+            <table class="table-my-orders">
+                <thead>
                     <tr>
-                        <td><span class="badge badge-dark">{{ order.id }}</span></td>
-                        <td>{{ order.createdAt|date('d/m/Y') }}</td>
-                        <td>{{ order.orderDetails|length }}</td>
-                        <td>{{ ((order.getTotal + order.carrierPrice) / 100) | number_format(2, ',', '.') }}€</td>
-                        <td class="text-right"><a href="{{ path('app_frontend_account_order_display', {id: order.id}) }}">Voir</a></td>
+                        <th>N° de commande</th>
+                        <th>Date de commande</th>
+                        <th>Produit(s)</th>
+                        <th>Montant total</th>
+                        <th></th>
                     </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    {% endif %}
+                </thead>
+                <tbody>
+                    {% for order in orders %}
+                        <tr>
+                            <td><span>{{ order.id }}</span></td>
+                            <td>{{ order.createdAt|date('d/m/Y') }}</td>
+                            <td>{{ order.orderDetails|length }}</td>
+                            <td>{{ ((order.getTotal + order.carrierPrice) / 100) | number_format(2, ',', '.') }}€</td>
+                            <td><a href="{{ path('app_frontend_account_order_display', {id: order.id}) }}" class="link">Détails</a></td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% endif %}
+    </section>
 {% endblock %}

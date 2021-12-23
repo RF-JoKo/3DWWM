@@ -18,7 +18,7 @@ class AccountOrderController extends AbstractController
     }
 
     /**
-     * @Route("/compte/commandes", name="app_frontend_account_order_index")
+     * @Route("/mon-compte/mes-commandes", name="app_frontend_account_order_index")
      */
     public function index(): Response
     {
@@ -30,7 +30,7 @@ class AccountOrderController extends AbstractController
     }
 
     /**
-     * @Route("/compte/commande/{id}", name="app_frontend_account_order_display")
+     * @Route("/mon-compte/commande/{id}", name="app_frontend_account_order_display")
      */
     public function display(Order $order): Response
     {

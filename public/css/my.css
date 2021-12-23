@@ -52,6 +52,17 @@ img
     background: #89FFFD;
 }
 
+.center
+{
+    text-align: center;
+}
+
+.link
+{
+    color: #89FFFD;
+    text-decoration: none;
+}
+
 /* HEADER */
 header
 {
@@ -94,15 +105,10 @@ footer
     position: absolute;
     text-align: center;
 }
-
-footer a
-{
-    color: #89FFFD;
-    text-decoration: none;
-}
 /* FOOTER */
 
 /* BODY */
+
 
 /* ---------- FRONTEND/HOME ----------> index.html.twig <---------- */
 
@@ -157,12 +163,6 @@ video
 .card-best-body h3
 {
     font-weight: 300;
-}
-
-.card-best-body a
-{
-    color: #89FFFD;
-    text-decoration: none;
 }
 
 .card-best-body span
@@ -246,11 +246,6 @@ video
     text-decoration: none;
     background: #89FFFD;
 }
-
-.center-register
-{
-    text-align: center;
-}
 /* ---------- SECURITY ----------> register.html.twig <---------- */
 
 
@@ -285,11 +280,6 @@ video
     margin-top: 25px;
 }
 
-.login
-{
-    text-align: center;
-}
-
 .login button
 {
     border: none;
@@ -307,12 +297,6 @@ video
 {
     margin-top: 25px;
     text-align: center;
-}
-
-.redirection-register a
-{
-    color: #89FFFD;
-    text-decoration: none;
 }
 /* ---------- SECURITY ----------> login.html.twig <---------- */
 
@@ -347,10 +331,9 @@ video
     color: #F5F5F5;
 }
 
-.card-account a
+.card-account img
 {
-    color: #89FFFD;
-    text-decoration: none;
+    width: 250px;
 }
 
 .card-account:first-child
@@ -363,3 +346,46 @@ video
     align-self: flex-start;
 }
 /* ---------- FRONTEND/ACCOUNT ----------> index.html.twig <---------- */
+
+
+/* ---------- FRONTEND/ACCOUNT/ORDER ----------> index.html.twig <---------- */
+.table-my-orders
+{
+    margin: 0 auto;
+}
+
+.table-my-orders thead
+{
+    color: #3E4044;
+    background: #89FFFD;
+}
+
+.table-my-orders th
+{
+    font-weight: 300;
+}
+
+.table-my-orders tbody
+{
+    text-align: center;
+    background: rgba(245, 245, 245, .5);
+}
+
+.table-my-orders,
+.table-my-orders th,
+.table-my-orders td
+{
+    border-collapse: collapse;
+}
+
+.table-my-orders tr
+{
+    border:1px solid #89FFFD;
+}
+
+.table-my-orders th,
+.table-my-orders td
+{
+    padding: 10px 25px;
+}
+/* ---------- FRONTEND/ACCOUNT/ORDER ----------> index.html.twig <---------- */
