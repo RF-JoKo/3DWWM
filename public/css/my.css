@@ -63,6 +63,41 @@ img
     text-decoration: none;
 }
 
+table thead
+{
+    color: #3E4044;
+    background: #89FFFD;
+}
+
+table th
+{
+    font-weight: 300;
+}
+
+table tbody
+{
+    text-align: center;
+    background: rgba(245, 245, 245, .5);
+}
+
+table,
+table th,
+table td
+{
+    border-collapse: collapse;
+}
+
+table tr
+{
+    border:1px solid #89FFFD;
+}
+
+table th,
+table td
+{
+    padding: 10px 25px;
+}
+
 /* HEADER */
 header
 {
@@ -351,41 +386,28 @@ video
 /* ---------- FRONTEND/ACCOUNT/ORDER ----------> index.html.twig <---------- */
 .table-my-orders
 {
-    margin: 0 auto;
-}
-
-.table-my-orders thead
-{
-    color: #3E4044;
-    background: #89FFFD;
-}
-
-.table-my-orders th
-{
-    font-weight: 300;
-}
-
-.table-my-orders tbody
-{
-    text-align: center;
-    background: rgba(245, 245, 245, .5);
-}
-
-.table-my-orders,
-.table-my-orders th,
-.table-my-orders td
-{
-    border-collapse: collapse;
-}
-
-.table-my-orders tr
-{
-    border:1px solid #89FFFD;
-}
-
-.table-my-orders th,
-.table-my-orders td
-{
-    padding: 10px 25px;
+    margin: 25px auto 0;
 }
 /* ---------- FRONTEND/ACCOUNT/ORDER ----------> index.html.twig <---------- */
+
+
+/* ---------- FRONTEND/ACCOUNT/ORDER ----------> display.html.twig <---------- */
+.details-account-order
+{
+    margin-top: 20px;
+    justify-content: space-around;
+}
+
+.details-account-order table
+{
+    margin-bottom: 10px;
+}
+
+.delivery-infos-account-order
+{
+    width: 25%;
+    padding: 20px 10px;
+    border-radius: 6px;
+    background: rgba(245, 245, 245, .5);
+}
+/* ---------- FRONTEND/ACCOUNT/ORDER ----------> display.html.twig <---------- */

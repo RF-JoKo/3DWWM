@@ -5,10 +5,7 @@
 {% block content %}
     <section>
         <h1 class="title">MES COMMANDES</h1>
-        <div class="center">
-            <a href="{{ path('app_frontend_account_index') }}" class="link">Retourner à mon compte</a>
-        </div>
-        <br>
+        <a href="{{ path('app_frontend_account_index') }}" class="link">Retour à mon compte</a>
         {% if orders|length == 0 %}
             <p>Vous n'avez pas encore commandé.</p>
         {% else %}
