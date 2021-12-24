@@ -17,42 +17,48 @@
         <br>
         <hr>
         <br>
-        <div class="flex details-account-order">
+        <div class="flex account-details-order">
             <div>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Produit(s)</th>
-                            <th>Quantité</th>
-                            <th>Prix</th>
-                            <th>Total</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {% for element in order.orderDetails %}
+                <h2>Récapitulatif de commande</h2>
+                <div class="account-recap-order">
+                    <table>
+                        <thead>
                             <tr>
-                                <td>{{ element.product }}</td>
-                                <td>{{ element.quantity }}</td>
-                                <td>{{ (element.price / 100) | number_format(2, ',', '.') }}€</td>
-                                <td>{{ (element.total / 100) | number_format(2, ',', '.') }}€</td>
+                                <th>Produit(s)</th>
+                                <th>Quantité</th>
+                                <th>Prix</th>
+                                <th>Total</th>
                             </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
-                <p>
-                    Total articles : {{ (order.getTotal / 100) | number_format(2, ',', '.') }}€
-                    <br>
-                    Frais de livraison : {{ (order.carrierPrice / 100) | number_format(2, ',', '.') }}€
-                </p>
+                        </thead>
+                        <tbody class="tbody-bg">
+                            {% for element in order.orderDetails %}
+                                <tr>
+                                    <td>{{ element.product }}</td>
+                                    <td>{{ element.quantity }}</td>
+                                    <td>{{ (element.price / 100) | number_format(2, ',', '.') }}€</td>
+                                    <td>{{ (element.total / 100) | number_format(2, ',', '.') }}€</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                    <p>
+                        <strong>Total articles :</strong> {{ (order.getTotal / 100) | number_format(2, ',', '.') }}€
+                    </p>
+                </div>
             </div>
-            <div class="delivery-infos-account-order">
-                <p>
-                    Transporteur : {{ order.carrierName }}
-                    <br>
-                    Adresse de livraison :
-                    <br>
-                    {{ order.delivery|raw }}
-                </p>
+            <div>
+                <h2>Détails sur l'expédition</h2>
+                <div class="account-details-delivery">
+                    <p>
+                        <strong>Transporteur :</strong> {{ order.carrierName }}
+                        <br>
+                        <strong>Adresse de livraison :</strong>
+                        <br>
+                        {{ order.delivery|raw }}
+                        <br>
+                        <strong>Frais de livraison :</strong> {{ (order.carrierPrice / 100) | number_format(2, ',', '.') }}€
+                    </p>
+                </div>
             </div>
         </div>
     </section>

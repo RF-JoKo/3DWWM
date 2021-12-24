@@ -77,7 +77,7 @@ table th
 table tbody
 {
     text-align: center;
-    background: rgba(245, 245, 245, .5);
+    background: rgba(245, 245, 245, .4);
 }
 
 table,
@@ -245,7 +245,7 @@ video
     margin: 0 auto;
     padding: 50px 25px;
     border-radius: 6px;
-    background: rgba(245, 245, 245, .5);
+    background: rgba(245, 245, 245, .4);
 }
 
 .register-error
@@ -291,7 +291,7 @@ video
     margin: 0 auto;
     padding: 50px 25px;
     border-radius: 6px;
-    background: rgba(245, 245, 245, .5);
+    background: rgba(245, 245, 245, .4);
 }
 
 .form-login label
@@ -356,7 +356,7 @@ video
     padding: 25px 0;
     border-radius: 6px;
     flex-direction: column;
-    background: rgba(245, 245, 245, .5);
+    background: rgba(245, 245, 245, .4);
 }
 
 .card-account p
@@ -392,22 +392,40 @@ video
 
 
 /* ---------- FRONTEND/ACCOUNT/ORDER ----------> display.html.twig <---------- */
-.details-account-order
+.account-details-order
 {
-    margin-top: 20px;
+    margin-top: 25px;
+    align-items: baseline;
     justify-content: space-around;
 }
 
-.details-account-order table
+.account-details-order h2
 {
+    font-weight: 300;
     margin-bottom: 10px;
 }
 
-.delivery-infos-account-order
+.account-recap-order
 {
-    width: 25%;
     padding: 20px 10px;
     border-radius: 6px;
-    background: rgba(245, 245, 245, .5);
+    background: rgba(245, 245, 245, .4);
+}
+
+.account-recap-order p
+{
+    margin-top: 5px;
+}
+
+.tbody-bg
+{
+    background: rgba(62, 64, 68, .1);
+}
+
+.account-details-delivery
+{
+    padding: 20px 10px;
+    border-radius: 6px;
+    background: rgba(245, 245, 245, .4);
 }
 /* ---------- FRONTEND/ACCOUNT/ORDER ----------> display.html.twig <---------- */
