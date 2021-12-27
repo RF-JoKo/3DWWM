@@ -7,7 +7,9 @@
         <h1 class="title">MES COMMANDES</h1>
         <a href="{{ path('app_frontend_account_index') }}" class="link">Retour à mon compte</a>
         {% if orders|length == 0 %}
-            <p>Vous n'avez pas encore commandé.</p>
+            <div class="center">
+                <p class="didn-t">Vous n'avez pas encore commandé.</p>
+            </div>
         {% else %}
             <table class="table-my-orders">
                 <thead>

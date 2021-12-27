@@ -98,6 +98,24 @@ table td
     padding: 10px 25px;
 }
 
+.didn-t
+{
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.button
+{
+    border: none;
+    font-size: 18px;
+    font-weight: 300;
+    color: #3E4044;
+    border-radius: 6px;
+    padding: 15px 20px;
+    text-decoration: none;
+    background: #89FFFD;
+}
+
 /* HEADER */
 header
 {
@@ -214,18 +232,6 @@ video
     margin-top: 60px;
     text-align: center;
 }
-
-.visit-shop a
-{
-    border: none;
-    font-size: 18px;
-    font-weight: 300;
-    color: #3E4044;
-    border-radius: 6px;
-    padding: 15px 20px;
-    text-decoration: none;
-    background: #89FFFD;
-}
 /* Best sellers */
 
 /* Who are we ? */
@@ -248,6 +254,11 @@ video
     background: rgba(245, 245, 245, .4);
 }
 
+.form-register .center
+{
+    margin-top: 25px;
+}
+
 .register-error
 {
     color: #FF0000;
@@ -267,19 +278,6 @@ video
     width: 300px;
     padding: 5px;
     border-radius: 6px;
-}
-
-.button-register
-{
-    border: none;
-    font-size: 18px;
-    font-weight: 300;
-    color: #3E4044;
-    margin-top: 25px;
-    border-radius: 6px;
-    padding: 15px 20px;
-    text-decoration: none;
-    background: #89FFFD;
 }
 /* ---------- SECURITY ----------> register.html.twig <---------- */
 
@@ -308,24 +306,16 @@ video
     border-radius: 6px;
 }
 
+.form-login .center
+{
+    margin-top: 25px;
+}
+
 .login-error
 {
     color: #FF0000;
     text-align: center;
     margin-top: 25px;
-}
-
-.login button
-{
-    border: none;
-    font-size: 18px;
-    font-weight: 300;
-    color: #3E4044;
-    margin-top: 25px;
-    border-radius: 6px;
-    padding: 15px 20px;
-    text-decoration: none;
-    background: #89FFFD;
 }
 
 .redirection-register
@@ -429,3 +419,32 @@ video
     background: rgba(245, 245, 245, .4);
 }
 /* ---------- FRONTEND/ACCOUNT/ORDER ----------> display.html.twig <---------- */
+
+
+/* ---------- FRONTEND/ACCOUNT/ADDRESS ----------> index.html.twig <---------- */
+.cards-account-address
+{
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.card-account-address
+{
+    width: 32%;
+    margin-top: 25px;
+    padding: 20px 10px;
+    border-radius: 6px;
+    background: rgba(245, 245, 245, .4);
+}
+
+.card-account-address h3
+{
+    font-weight: 300;
+    margin-bottom: 5px;
+}
+
+.btn-add-address
+{
+    margin-bottom: 25px;
+}
+/* ---------- FRONTEND/ACCOUNT/ADDRESS ----------> index.html.twig <---------- */

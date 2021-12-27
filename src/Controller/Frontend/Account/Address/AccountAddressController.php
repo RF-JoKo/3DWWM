@@ -16,7 +16,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class AccountAddressController extends AbstractController
 {
     /**
-     * @Route("/compte/adresses", name="app_frontend_account_address_index")
+     * @Route("/mon-compte/mes-adresses", name="app_frontend_account_address_index")
      */
     public function index(): Response
     {
