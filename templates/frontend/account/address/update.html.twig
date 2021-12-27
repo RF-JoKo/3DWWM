@@ -1,22 +1,37 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Modifier adresse | 3DWWM{% endblock %}
+{% block title %}Modifier mon adresse | 3DWWM{% endblock %}
 
 {% block content %}
-    <h1>MODIFIER MON ADRESSE</h1>
-
-    <a href="{{ path('app_frontend_account_index') }}">Retourner à mon compte</a>
-
-    {{ form_start(form) }}
-        <div class="row">
-            <div class="col-md-12">{{ form_row(form.name) }}</div>
-            <div class="col-md-6">{{ form_row(form.firstname) }}</div>
-            <div class="col-md-6">{{ form_row(form.lastname) }}</div>
-            <div class="col-md-12">{{ form_row(form.address) }}</div>
-            <div class="col-md-6">{{ form_row(form.postal) }}</div>
-            <div class="col-md-6">{{ form_row(form.city) }}</div>
-            <div class="col-md-6">{{ form_row(form.country) }}</div>
-            <div class="col-md-6">{{ form_row(form.phone) }}</div>
-        </div>
-    {{ form_end(form) }}
+    <section>
+        <h1 class="title">MODIFIER MON ADRESSE</h1>
+        <a href="{{ path('app_frontend_account_address_index') }}" class="link">Retour à mes adresses</a>
+        {{ form_start(form) }}
+            <div class="form-address">
+                <div>
+                    <span>{{ form_widget(form.name) }}</span>
+                </div>
+                <div>
+                    <span>{{ form_widget(form.firstname) }}</span>
+                    <span>{{ form_widget(form.lastname) }}</span>
+                </div>
+                <div>
+                    <span>{{ form_widget(form.address) }}</span>
+                </div>
+                <div>
+                    <span>{{ form_widget(form.postal) }}</span>
+                    <span>{{ form_widget(form.city) }}</span>
+                </div>
+                <div>
+                    <span>{{ form_widget(form.country) }}</span>
+                </div>
+                <div>
+                    <span>{{ form_widget(form.phone) }}</span>
+                </div>
+                <div class="center">
+                    {{ form_widget(form.submit) }}
+                </div>
+            </div>
+        {{ form_end(form) }}
+    </section>
 {% endblock %}

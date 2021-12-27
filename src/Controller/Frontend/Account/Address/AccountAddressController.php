@@ -61,7 +61,7 @@ class AccountAddressController extends AbstractController
     }
 
     /**
-     * @Route("/compte/modifier-adresse/{id}", name="app_frontend_account_address_update")
+     * @Route("/mon-compte/modifier-mon-adresse/{id}", name="app_frontend_account_address_update")
      */
     public function update(Request $request, $id, AddressRepository $addressRepository): Response
     {

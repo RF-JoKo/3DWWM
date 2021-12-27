@@ -450,8 +450,8 @@ video
 /* ---------- FRONTEND/ACCOUNT/ADDRESS ----------> index.html.twig <---------- */
 
 
-/* ---------- FRONTEND/ACCOUNT/ADDRESS ----------> add.html.twig <---------- */
-.form-add-address
+/* ---------- FRONTEND/ACCOUNT/ADDRESS ----------> add.html.twig & update.html.twig <---------- */
+.form-address
 {
     width: 50%;
     margin: 25px auto;
@@ -477,4 +477,4 @@ video
     border-radius: 6px;
     margin-bottom: 10px;
 }
-/* ---------- FRONTEND/ACCOUNT/ADDRESS ----------> add.html.twig <---------- */
+/* ---------- FRONTEND/ACCOUNT/ADDRESS ----------> add.html.twig & update.html.twig <---------- */
