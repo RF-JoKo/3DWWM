@@ -254,6 +254,12 @@ video
     background: rgba(245, 245, 245, .4);
 }
 
+.form-register label
+{
+    font-size: 18px;
+    color: #F5F5F5;
+}
+
 .form-register .center
 {
     margin-top: 25px;
@@ -264,12 +270,6 @@ video
     color: #FF0000;
     text-align: center;
     margin-bottom: 5px;
-}
-
-.register label
-{
-    font-size: 18px;
-    color: #F5F5F5;
 }
 
 .input-register
@@ -448,3 +448,33 @@ video
     margin-bottom: 25px;
 }
 /* ---------- FRONTEND/ACCOUNT/ADDRESS ----------> index.html.twig <---------- */
+
+
+/* ---------- FRONTEND/ACCOUNT/ADDRESS ----------> add.html.twig <---------- */
+.form-add-address
+{
+    width: 50%;
+    margin: 25px auto;
+    padding: 25px;
+    border-radius: 6px;
+    background: rgba(245, 245, 245, .4);
+}
+
+.input-address
+{
+    width: 100%;
+    border: none;
+    padding: 5px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.input-address-width
+{
+    width: 49.5%;
+    border: none;
+    padding: 5px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+/* ---------- FRONTEND/ACCOUNT/ADDRESS ----------> add.html.twig <---------- */

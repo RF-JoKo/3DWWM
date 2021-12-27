@@ -23,7 +23,7 @@
                                 <br>
                                 {{ address.country }}
                                 <br>
-                                <a href="{{ path('app_frontend_account_address_update', {id: address.id}) }}" class="link">Modifier</a> - <a href="{{ path('app_frontend_account_address_delete', {id: address.id}) }}" class="link">Supprimer</a>
+                                <a href="{{ path('app_frontend_account_address_update', {id: address.id}) }}" class="link">Modifier</a> &middot; <a href="{{ path('app_frontend_account_address_delete', {id: address.id}) }}" class="link">Supprimer</a>
                             </p>
                         </div>
                     </div>
@@ -31,7 +31,7 @@
             </div>
         {% endif %}
         <div class="center">
-            <a href="{{ path('app_frontend_account_address_add') }}" class="button">Ajouter une nouvelle adresse</a>
+            <a href="{{ path('app_frontend_account_address_add') }}" class="button">Ajouter une adresse</a>
         </div>
     </section>
 {% endblock %}

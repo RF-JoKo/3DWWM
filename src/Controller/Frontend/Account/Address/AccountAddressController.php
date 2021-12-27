@@ -24,7 +24,7 @@ class AccountAddressController extends AbstractController
     }
 
     /**
-     * @Route("/compte/ajouter-adresse", name="app_frontend_account_address_add")
+     * @Route("/mon-compte/ajouter-une-adresse", name="app_frontend_account_address_add")
      */
     public function add(Cart $cart, Request $request): Response
     {

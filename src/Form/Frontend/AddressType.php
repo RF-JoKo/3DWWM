@@ -19,55 +19,63 @@ class AddressType extends AbstractType
             ->add('name', TextType::class, [
                 'label' => false,
                 'attr' => [
-                    'placeholder' => "Nom de l'adresse"
+                    'placeholder' => "Ex : Maison, Travail...",
+                    'class' => 'input-address'
                 ]
             ])
             ->add('firstname', TextType::class, [
                 'label' => false,
                 'attr' => [
-                    'placeholder' => "Prénom"
+                    'placeholder' => "Prénom",
+                    'class' => 'input-address-width'
                 ]
             ])
             ->add('lastname', TextType::class, [
                 'label' => false,
                 'attr' => [
-                    'placeholder' => "Nom de famille"
+                    'placeholder' => "Nom de famille",
+                    'class' => 'input-address-width'
                 ]
             ])
             ->add('address', TextType::class, [
                 'label' => false,
                 'attr' => [
-                    'placeholder' => "Adresse"
+                    'placeholder' => "Adresse",
+                    'class' => 'input-address'
                 ]
             ])
             ->add('postal', TextType::class, [
                 'label' => false,
                 'attr' => [
-                    'placeholder' => "Code postal"
+                    'placeholder' => "Code postal",
+                    'class' => 'input-address-width'
                 ]
             ])
             ->add('city', TextType::class, [
                 'label' => false,
                 'attr' => [
-                    'placeholder' => "Ville"
+                    'placeholder' => "Ville",
+                    'class' => 'input-address-width'
                 ]
             ])
             ->add('country', CountryType::class, [
                 'label' => false,
+                'placeholder' => "Pays",
                 'attr' => [
-                    'placeholder' => "Pays"
+                    'class' => 'input-address'
                 ]
             ])
             ->add('phone', TelType::class, [
                 'label' => false,
                 'attr' => [
-                    'placeholder' => "Numéro de téléphone"
+                    'placeholder' => "Numéro de téléphone",
+                    'class' => 'input-address'
                 ]
             ])
             ->add('submit', SubmitType::class, [
                 'label' => 'Valider',
                 'attr' => [
-                    'class' => 'btn-block btn-primary'
+                    'class' => 'button'
                 ]
             ])
         ;
