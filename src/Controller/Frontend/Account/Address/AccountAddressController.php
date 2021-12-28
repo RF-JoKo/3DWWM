@@ -92,7 +92,7 @@ class AccountAddressController extends AbstractController
     }
 
     /**
-     * @Route("/compte/supprimer-adresse/{id}", name="app_frontend_account_address_delete")
+     * @Route("/my-account/delete-my-address/{id}", name="app_frontend_account_address_delete")
      */
     public function delete($id, AddressRepository $addressRepository): Response
     {

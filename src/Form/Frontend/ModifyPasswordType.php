@@ -17,10 +17,10 @@ class ModifyPasswordType extends AbstractType
     {
         $builder
             ->add('current_password', PasswordType::class, [
-                'label' => false,
+                'label' => 'MOT DE PASSE ACTUEL',
                 'mapped' => false,
                 'attr' => [
-                    'placeholder' => 'Mot de passe actuel'
+                    'class' => 'input-password'
                 ]
             ])
             ->add('new_password', RepeatedType::class, [
@@ -28,22 +28,27 @@ class ModifyPasswordType extends AbstractType
                 'mapped' => false,
                 'first_options' => ['label' => false,
                                     'attr' => [
-                                        'placeholder' => 'Nouveau mot de passe - 6 caractères minimum'
+                                        'placeholder' => '6 caractères minimum',
+                                        'class' => 'input-password'
                                     ],
                                     'constraints' => new Length(['min' => 6,
-                                                                 'minMessage' => 'Votre nouveau mot de passe doit contenir au minimum 6 caractères',
+                                                                 'minMessage' => ': votre nouveau mot de passe doit contenir au minimum 6 caractères.',
                                                                  'max' =>255
                                     ])
                 ],
-                'second_options' => ['label' => false,
+                'second_options' => ['label' => 'CONFIRMEZ MOT DE PASSE',
                                      'attr' => [
-                                         'placeholder' => 'Confirmation nouveau mot de passe'
+                                         'placeholder' => 'Répétez le mot de passe',
+                                         'class' => 'input-password'
                                      ]
                 ],
-                'invalid_message' => 'Mots de passe différents'
+                'invalid_message' => ': mots de passe différents.'
             ])
             ->add('submit', SubmitType::class, [
-                'label' => 'Modifier mot de passe'
+                'label' => 'Modifier mot de passe',
+                'attr' => [
+                    'class' => 'button'
+                ]
             ]);
     }
 

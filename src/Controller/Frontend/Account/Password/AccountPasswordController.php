@@ -14,9 +14,9 @@ use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 class AccountPasswordController extends AbstractController
 {
     /**
-     * @Route("/compte/modifier-mot-de-passe", name="app_frontend_account_password_modify")
+     * @Route("/mon-compte/modifier-mon-mot-de-passe", name="app_frontend_account_password_update")
      */
-    public function modify(Request $request, UserPasswordHasherInterface $crypter): Response
+    public function update(Request $request, UserPasswordHasherInterface $crypter): Response
     {
         $notification = null;
 
@@ -53,7 +53,7 @@ class AccountPasswordController extends AbstractController
             }
         }
 
-        return $this->render('frontend/account/password/modify.html.twig', [
+        return $this->render('frontend/account/password/update.html.twig', [
             'form' => $form->createView(),
             'notification' => $notification
         ]);

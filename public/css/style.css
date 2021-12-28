@@ -478,3 +478,40 @@ video
     margin-bottom: 10px;
 }
 /* ---------- FRONTEND/ACCOUNT/ADDRESS ----------> add.html.twig & update.html.twig <---------- */
+
+
+/* ---------- FRONTEND/ACCOUNT/PASSWORD ----------> update.html.twig <---------- */
+.form-password
+{
+    width: 50%;
+    margin: 0 auto;
+    padding: 50px 25px;
+    border-radius: 6px;
+    background: rgba(245, 245, 245, .4);
+}
+
+.password-error
+{
+    color: #FF0000;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.form-password label
+{
+    font-size: 18px;
+}
+
+.form-password .center
+{
+    margin-top: 25px;
+}
+
+.input-password
+{
+    border: none;
+    width: 300px;
+    padding: 5px;
+    border-radius: 6px;
+}
+/* ---------- FRONTEND/ACCOUNT/PASSWORD ----------> update.html.twig <---------- */
