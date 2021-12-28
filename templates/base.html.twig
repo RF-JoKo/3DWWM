@@ -15,7 +15,7 @@
     <header class="flex">
         <a href="{{ path('app_frontend_home_index') }}"><h1><span>3D</span>WWM</h1></a>
         <nav class="flex">
-            <a href="{{ path('app_frontend_product_index') }}">Boutique</a>
+            <a href="{{ path('app_frontend_product_index') }}">Nos produits</a>
             <a href="{{ path('app_frontend_cart_index') }}">Panier ({{ app.session.get('cart')|length }})</a>
             {% if app.user %}
                 <a href="{{ path('app_frontend_account_index') }}">Mon compte</a><a href="{{ path('app_logout') }}">Déconnexion</a>
@@ -30,14 +30,10 @@
     {% block content %}{% endblock %}
     {# CONTENT #}
 
-    {# PRODUCTS #}
-    {% block products %}{% endblock %}
-    {# PRODUCTS #}
-
-    <hr>
+    {# <hr> #}
 
     {# FOOTER #}
-    <footer>
+    {# <footer>
         <p>
             &copy; 2022 3DWWM
             <br>
@@ -49,7 +45,7 @@
                 </div>
             </small>
         </p>
-    </footer>
+    </footer> #}
     {# FOOTER #}
 
 </body>

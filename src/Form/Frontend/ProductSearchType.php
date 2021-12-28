@@ -21,7 +21,8 @@ class ProductSearchType extends AbstractType
                 'label' => false,
                 'required' => false,
                 'attr' => [
-                    'placeholder' => 'Recherche...'
+                    'placeholder' => 'Recherche...',
+                    'class' => 'input-product-search'
                 ]
             ])
             ->add('designer', EntityType::class, [
@@ -29,19 +30,25 @@ class ProductSearchType extends AbstractType
                 'required' => false,
                 'class' => Designer::class,
                 'placeholder' => 'Designer',
-                'choice_value' => 'name'
+                'choice_value' => 'name',
+                'attr' => [
+                    'class' => 'input-product-search-width'
+                ]
             ])
             ->add('category', EntityType::class, [
                 'label' => false,
                 'required' => false,
                 'class' => Category::class,
                 'placeholder' => 'Catégorie',
-                'choice_value' => 'name'
+                'choice_value' => 'name',
+                'attr' => [
+                    'class' => 'input-product-search-width'
+                ]
             ])
             ->add('submit', SubmitType::class, [
                 'label' => 'Rechercher',
                 'attr' => [
-                    'class' => 'btn-block btn-primary'
+                    'class' => 'button'
                 ]
             ]);
     }

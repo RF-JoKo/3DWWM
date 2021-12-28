@@ -12,7 +12,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class ProductController extends AbstractController
 {
     /**
-     * @Route("/nos-modeles", name="app_frontend_product_index")
+     * @Route("/nos-produits", name="app_frontend_product_index")
      */
     public function index(Request $request): Response
     {
@@ -39,7 +39,7 @@ class ProductController extends AbstractController
     }
 
     /**
-     * @Route("/modele/{slug}", name="app_frontend_product_display")
+     * @Route("/produit/{slug}", name="app_frontend_product_display")
      */
     public function display(Product $product): Response
     {
