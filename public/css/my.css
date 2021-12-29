@@ -701,3 +701,31 @@ video
     background: rgba(245, 245, 245, .4);
 }
 /* ---------- FRONTEND/ORDER ----------> delivery.html.twig <---------- */
+
+
+/* ---------- FRONTEND/ORDER ----------> add.html.twig <---------- */
+.recap-my-order .flex
+{
+    gap: 50px;
+    margin-top: 50px;
+    justify-content: center;
+}
+
+.recap-my-order .center
+{
+    margin-top: 35px;
+}
+
+.total-recap-price
+{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.recap-delivery
+{
+    padding: 23px 10px;
+    border-radius: 6px;
+    background: rgba(245, 245, 245, .4);
+}
+/* ---------- FRONTEND/ORDER ----------> add.html.twig <---------- */
