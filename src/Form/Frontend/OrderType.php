@@ -26,16 +26,16 @@ class OrderType extends AbstractType
                 'expanded' => true
             ])
             ->add('carriers', EntityType::class, [
-                'label' => 'Mode de livraison :',
+                'label' => false,
                 'required' => true,
                 'class' => Carrier::class,
-                'placeholder' => 'Transporteur',
-                'choice_value' => 'name'
+                'multiple' => false,
+                'expanded' => true
             ])
             ->add('submit', SubmitType::class, [
                 'label' => 'Valider la commande',
                 'attr' => [
-                    'class' => 'btn-block btn-primary'
+                    'class' => 'button'
                 ]
             ]);
     }

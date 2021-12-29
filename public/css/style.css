@@ -135,6 +135,11 @@ table td
     margin-right: 5px;
 }
 
+.form-group
+{
+    border: none;
+}
+
 /* HEADER */
 header
 {
@@ -443,6 +448,7 @@ video
 {
     flex-wrap: wrap;
     margin-bottom: 40px;
+    justify-content: space-around;
 }
 
 .card-account-address
@@ -662,3 +668,36 @@ video
     font-weight: bold;
 }
 /* ---------- FRONTEND/CART ----------> index.html.twig <---------- */
+
+
+/* ---------- FRONTEND/ORDER ----------> delivery.html.twig <---------- */
+.delivery-details .flex
+{
+    align-items: baseline;
+    justify-content: space-around;
+}
+
+.delivery-details h2
+{
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.delivery-details .card
+{
+    width: 40%;
+}
+
+.delivery-details .center
+{
+    margin-top: 20px;
+}
+
+.form-check
+{
+    margin: 10px 0;
+    padding: 20px 10px;
+    border-radius: 6px;
+    background: rgba(245, 245, 245, .4);
+}
+/* ---------- FRONTEND/ORDER ----------> delivery.html.twig <---------- */

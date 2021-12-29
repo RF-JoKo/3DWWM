@@ -24,7 +24,7 @@ class OrderController extends AbstractController
     }
 
     /**
-     * @Route("/commande/livraison", name="app_frontend_order_delivery")
+     * @Route("/commande/details-expedition", name="app_frontend_order_delivery")
      */
     public function delivery(Cart $cart): Response
     {
