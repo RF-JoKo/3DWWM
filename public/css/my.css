@@ -80,6 +80,18 @@ table tbody
     background: rgba(245, 245, 245, .4);
 }
 
+table img
+{
+    height: 50px;
+    margin: 0 25px;
+}
+
+table tfoot
+{
+    text-align: right;
+    background: rgba(245, 245, 245, .4);
+}
+
 table,
 table th,
 table td
@@ -114,6 +126,13 @@ table td
     padding: 15px 20px;
     text-decoration: none;
     background: #89FFFD;
+}
+
+.arrow
+{
+    color: #F5F5F5;
+    font-weight: 300;
+    margin-right: 5px;
 }
 
 /* HEADER */
@@ -605,3 +624,41 @@ video
     font-weight: 300;
 }
 /* ---------- FRONTEND/PRODUCT ----------> display.html.twig <---------- */
+
+
+/* ---------- FRONTEND/CART ----------> index.html.twig <---------- */
+.table-cart
+{
+    margin: 25px auto 35px;
+}
+
+.table-cart .flex
+{
+    justify-content: space-around;
+}
+
+.table-cart .button-remove
+{
+    border: none;
+    margin: 0 5px;
+    font-size: 18px;
+    font-weight: 300;
+    color: #3E4044;
+    border-radius: 6px;
+    padding: 0 9px;
+    text-decoration: none;
+    background: #89FFFD;
+}
+
+.table-cart .button
+{
+    margin: 0 5px;
+    padding: 0 6px;
+}
+
+.table-cart span
+{
+    font-size: 18px;
+    font-weight: bold;
+}
+/* ---------- FRONTEND/CART ----------> index.html.twig <---------- */

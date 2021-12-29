@@ -5,7 +5,7 @@
 {% block content %}
     <section>
         <h1 class="title">MES ADRESSES</h1>
-        <a href="{{ path('app_frontend_account_index') }}" class="link">Retour à mon compte</a>
+        <a href="{{ path('app_frontend_account_index') }}" class="link"><span class="arrow"><</span>Retour à mon compte</a>
         {% if app.user.addresses|length == 0 %}
             <div class="center btn-add-address">
                 <p class="didn-t">Veuillez ajouter une adresse.</p>

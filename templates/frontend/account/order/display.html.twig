@@ -5,7 +5,7 @@
 {% block content %}
     <section>
         <h1 class="title">DÉTAILS DE LA COMMANDE</h1>
-        <a href="{{ path('app_frontend_account_order_index') }}" class="link">Retour à mes commandes</a>
+        <a href="{{ path('app_frontend_account_order_index') }}" class="link"><span class="arrow"><</span>Retour à mes commandes</a>
         <p>
             <br>
             Date de commande : {{ order.createdAt|date('d/m/Y') }}

@@ -14,12 +14,12 @@
                 <br>
                 <hr>
                 <br>
-                <p><span>{{ (product.price / 100) | number_format(2, ',', '.') }}€</span></p>
+                <p><span>{{ (product.price / 100) | number_format(2, ',', '.') }}€ TTC</span></p>
                 <br>
                 <p>{{ product.description|raw }}</p>
                 <br>
-                <p>Taille du modèle (mm) : {{ product.size }}</p>
-                <p>Catégorie : {{ product.category.name }}</p>
+                <p><strong>Taille du modèle (mm) :</strong> {{ product.size }}</p>
+                <p><strong>Catégorie :</strong> {{ product.category.name }}</p>
             </div>
             <br>
             <div>
