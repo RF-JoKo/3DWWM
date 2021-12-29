@@ -3,19 +3,28 @@
 {% block title %}{{ product.name }} | 3DWWM{% endblock %}
 
 {% block content %}
-    <h1>{{ product.name }}</h1>
-    <p class="card-text">par <a href="#">{{ product.designer.name }}</a></p>
-    <div class="row">
-        <div class="col-md-4 text-center my-auto">
-            <img class="img-fluid rounded" src="/uploads/products/{{ product.image }}" alt="{{ product.name }}">
+    <section class="flex display-product">
+        <div>
+            <img src="/uploads/products/{{ product.image }}" alt="{{ product.name }}">
         </div>
-        <div class="col-md-8">
-            <p class="card-text" style="font-size: 24px">{{ (product.price / 100) | number_format(2, ',', '.') }}€</p>
-            <hr>
-            <p class="card-text">{{ product.description }}</p>
-            <p class="card-text">Taille du modèle (mm) : {{ product.size }}</p>
-            <p class="card-text">Catégorie : {{ product.category.name }}</p>
-            <a href="{{ path('app_frontend_cart_add', {id: product.id}) }}" class="btn btn-primary">Ajouter au panier</a>
+        <div>
+            <div class="display-product-content">
+                <h1 class="title">{{ product.name }}</h1>
+                <p>par <a href="#" class="link">{{ product.designer.name }}</a></p>
+                <br>
+                <hr>
+                <br>
+                <p><span>{{ (product.price / 100) | number_format(2, ',', '.') }}€</span></p>
+                <br>
+                <p>{{ product.description|raw }}</p>
+                <br>
+                <p>Taille du modèle (mm) : {{ product.size }}</p>
+                <p>Catégorie : {{ product.category.name }}</p>
+            </div>
+            <br>
+            <div>
+                <a href="{{ path('app_frontend_cart_add', {id: product.id}) }}" class="button">Ajouter au panier</a>
+            </div>
         </div>
-    </div>
+    </section>
 {% endblock %}

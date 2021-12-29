@@ -16,7 +16,11 @@
         <a href="{{ path('app_frontend_home_index') }}"><h1><span>3D</span>WWM</h1></a>
         <nav class="flex">
             <a href="{{ path('app_frontend_product_index') }}">Nos produits</a>
-            <a href="{{ path('app_frontend_cart_index') }}">Panier ({{ app.session.get('cart')|length }})</a>
+            {% if app.session.get('cart')|length > 0 %}
+                <a href="{{ path('app_frontend_cart_index') }}">Panier (<span>{{ app.session.get('cart')|length }}</span>)</a>
+            {% else %}
+                <a href="{{ path('app_frontend_cart_index') }}">Panier ({{ app.session.get('cart')|length }})</a>
+            {% endif %}
             {% if app.user %}
                 <a href="{{ path('app_frontend_account_index') }}">Mon compte</a><a href="{{ path('app_logout') }}">Déconnexion</a>
             {% else %}

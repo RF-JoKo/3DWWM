@@ -47,7 +47,7 @@ img
     width: 150px;
     height: 10px;
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     border-radius: 30px;
     background: #89FFFD;
 }
@@ -580,3 +580,28 @@ video
     border-radius: 6px;
 }
 /* ---------- FRONTEND/PRODUCT ----------> index.html.twig <---------- */
+
+
+/* ---------- FRONTEND/PRODUCT ----------> display.html.twig <---------- */
+.display-product
+{
+    gap: 50px;
+    justify-content: center;
+}
+
+.display-product .title
+{
+    margin: 0;
+}
+
+.display-product-content
+{
+    margin-bottom: 25px;
+}
+
+.display-product-content span
+{
+    font-size: 18px;
+    font-weight: 300;
+}
+/* ---------- FRONTEND/PRODUCT ----------> display.html.twig <---------- */

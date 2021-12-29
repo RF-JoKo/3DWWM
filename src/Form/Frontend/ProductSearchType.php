@@ -46,7 +46,7 @@ class ProductSearchType extends AbstractType
                 ]
             ])
             ->add('submit', SubmitType::class, [
-                'label' => 'Rechercher',
+                'label' => 'OK',
                 'attr' => [
                     'class' => 'button'
                 ]
