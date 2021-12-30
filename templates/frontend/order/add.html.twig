@@ -1,14 +1,13 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Récapitulatif de ma commande | 3DWWM{% endblock %}
+{% block title %}Récapitulatif de la commande | 3DWWM{% endblock %}
 
 {% block content %}
     <section class="recap-my-order">
-        <h1 class="title">RÉCAPITULATIF DE MA COMMANDE</h1>
+        <h1 class="title">RÉCAPITULATIF DE LA COMMANDE</h1>
         <div class="flex">
             <div>
                 {% set total = null %}
-                {% for element in cart %}
                     <div>
                         <table>
                             <thead>
@@ -21,17 +20,19 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>
-                                        <img src="/uploads/products/{{ element.product.image }}" alt="{{ element.product.name }}">
-                                    </td>
-                                    <td>{{ element.product.name }}</td>
-                                    <td>{{ element.quantity }}</td>
-                                    <td>{{ (element.product.price / 100) | number_format(2, ',', '.') }}€</td>
-                                    <td>{{ (element.product.price * element.quantity / 100) | number_format(2, ',', '.') }}€</td>
-                                </tr>
-                            </tbody>
+                                {% for element in cart %}
+                                    <tr>
+                                        <td>
+                                            <img src="/uploads/products/{{ element.product.image }}" alt="{{ element.product.name }}">
+                                        </td>
+                                        <td>{{ element.product.name }}</td>
+                                        <td>{{ element.quantity }}</td>
+                                        <td>{{ (element.product.price / 100) | number_format(2, ',', '.') }}€</td>
+                                        <td>{{ (element.product.price * element.quantity / 100) | number_format(2, ',', '.') }}€</td>
+                                    </tr>
                 {% set total = total + (element.product.price * element.quantity) %}
+                                {% endfor %}
+                            </tbody>
                             <tfoot>
                                 <tr>
                                     <td colspan="4"><strong>Total articles</strong></td>
@@ -43,12 +44,11 @@
                                 </tr>
                                 <tr>
                                     <td colspan="4"><strong>Total de la commande</strong></td>
-                                    <td><span class="total-recap-price">{{ ((total / 100) + (carrier.price / 100)) | number_format(2, ',', '.') }}€</span></td>
+                                    <td><span class="order-price">{{ ((total / 100) + (carrier.price / 100)) | number_format(2, ',', '.') }}€</span></td>
                                 </tr>
                             </tfoot>
                         </table>
                     </div>
-                {% endfor %}
             </div>
             <div>
                 <div class="recap-delivery">

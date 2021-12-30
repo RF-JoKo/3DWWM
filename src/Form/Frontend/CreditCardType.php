@@ -19,45 +19,50 @@ class CreditCardType extends AbstractType
                 'label' => false,
                 'required' => true,
                 'attr' => [
-                    'placeholder' => 'Nom du titulaire de la carte'
+                    'placeholder' => 'Nom du titulaire de la carte',
+                    'class' => 'input-card-name'
                 ]
             ])
             ->add('number', NumberType::class, [
                 'label' => false,
                 'required' => true,
                 'attr' => [
-                    'placeholder' => 'Numéro de carte',
-                    'pattern' => '[0-9]{16}'
+                    'placeholder' => '1234 5678 9012 3456',
+                    'pattern' => '[0-9]{16}',
+                    'class' => 'input-card-number'
                 ]
             ])
             ->add('expiryMonth', NumberType::class, [
                 'label' => false,
                 'required' => true,
                 'attr' => [
-                    'placeholder' => 'Mois d\'expiration',
-                    'pattern' => '[0-9]{2}'
+                    'placeholder' => 'MM',
+                    'pattern' => '[0-9]{2}',
+                    'class' => 'input-card-expiry'
                 ]
             ])
             ->add('expiryYear', NumberType::class, [
                 'label' => false,
                 'required' => true,
                 'attr' => [
-                    'placeholder' => 'Année d\'expiration',
-                    'pattern' => '[0-9]{2}'
+                    'placeholder' => 'AA',
+                    'pattern' => '[0-9]{2}',
+                        'class' => 'input-card-expiry'
                 ]
             ])
             ->add('cryptogram', NumberType::class, [
                 'label' => false,
                 'required' => true,
                 'attr' => [
-                    'placeholder' => 'Cryptogramme',
-                    'pattern' => '[0-9]{3}'
+                    'placeholder' => 'CVV',
+                    'pattern' => '[0-9]{3}',
+                    'class' => 'input-card-cryptogram'
                 ]
             ])
             ->add('submit', SubmitType::class, [
                 'label' => 'Payer',
                 'attr' => [
-                    'class' => 'btn-block btn-primary'
+                    'class' => 'button'
                 ]
             ])
         ;

@@ -3,22 +3,37 @@
 {% block title %}Paiement | 3DWWM{% endblock %}
 
 {% block content %}
-    <h1>PAIEMENT</h1>
-
-    <div class="row">
-        <div class="col-md-6 text-center my-auto">
-            <h3>Montant à payer : <strong>{{ ((order.total / 100) + (order.carrierPrice / 100)) | number_format(2, ',', '.') }}€</strong></h3>
-        </div>
-        <div class="col-md-6">
+    <section class="payment">
+        <h1 class="title">PAIEMENT</h1>
+    <div class="flex">
+            <div>
+                <h2 class="amount">Montant à régler</h2>
+                <div class="center">
+                    <span class="amount-price">{{ ((order.total / 100) + (order.carrierPrice / 100)) | number_format(2, ',', '.') }}€</span>
+                </div>
+            </div>
+        <div>
             {{ form_start(form) }}
-                <div class="row">
-                    <div class="col-md-12">{{ form_row(form.name) }}</div>
-                    <div class="col-md-12">{{ form_row(form.number) }}</div>
-                    <div class="col-md-4">{{ form_row(form.expiryMonth) }}</div>
-                    <div class="col-md-4">{{ form_row(form.expiryYear) }}</div>
-                    <div class="col-md-4">{{ form_row(form.cryptogram) }}</div>
+                <div class="credit-card">
+                    <h2><span>3D</span>WWM</h2>
+                    <img src="/images/logo.png" alt="logo 3DWWM" class="logo-card">
+                    <img src="/images/card-ship.png" alt="puce cb" class="card-ship">
+                    <div>
+                        {{ form_widget(form.number) }}
+                    </div>
+                    <div class="card-expiry">
+                        {{ form_widget(form.expiryMonth) }}/{{ form_widget(form.expiryYear) }}
+                    </div>
+                    <div>
+                        {{ form_widget(form.name) }}
+                    </div>
+                    {{ form_widget(form.cryptogram) }}
+                </div>
+                <div class="center">
+                    {{ form_row(form.submit) }}
                 </div>
             {{ form_end(form) }}
         </div>
     </div>
+    </section>
 {% endblock %}

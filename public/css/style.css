@@ -140,6 +140,12 @@ table td
     border: none;
 }
 
+.order-price
+{
+    font-size: 18px;
+    font-weight: bold;
+}
+
 /* HEADER */
 header
 {
@@ -417,23 +423,6 @@ video
     margin-bottom: 10px;
 }
 
-.account-recap-order
-{
-    padding: 20px 10px;
-    border-radius: 6px;
-    background: rgba(245, 245, 245, .4);
-}
-
-.account-recap-order p
-{
-    margin-top: 5px;
-}
-
-.tbody-bg
-{
-    background: rgba(62, 64, 68, .1);
-}
-
 .account-details-delivery
 {
     padding: 20px 10px;
@@ -708,24 +697,125 @@ video
 {
     gap: 50px;
     margin-top: 50px;
+    align-items: baseline;
     justify-content: center;
 }
 
 .recap-my-order .center
 {
-    margin-top: 35px;
-}
-
-.total-recap-price
-{
-    font-size: 18px;
-    font-weight: bold;
+    margin-top: 60px;
 }
 
 .recap-delivery
 {
-    padding: 23px 10px;
+    padding: 15px 10px;
     border-radius: 6px;
     background: rgba(245, 245, 245, .4);
 }
 /* ---------- FRONTEND/ORDER ----------> add.html.twig <---------- */
+
+
+/* ---------- FRONTEND/ORDER ----------> pay.html.twig <---------- */
+.amount
+{
+    font-weight: 300;
+}
+
+.amount-price
+{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.payment .flex
+{
+    justify-content: space-around;
+}
+
+.credit-card
+{
+    width: 110%;
+    position: relative;
+    margin: 0 auto 25px;
+    border-radius: 10px;
+    padding: 145px 25px 25px;
+    border: solid 1px #89FFFD;
+    background: rgba(245, 245, 245, .4);
+}
+
+.credit-card h2
+{
+    top: 0;
+    left: 0;
+    position: absolute;
+    margin: 25px 25px 0;
+}
+
+.credit-card span
+{
+    color: #89FFFD;
+}
+
+.credit-card .logo-card
+{
+    top: 0;
+    right: 0;
+    height: 125px;
+    position: absolute;
+    
+}
+
+.credit-card .card-ship
+{
+    left: 0;
+    top: 31%;
+    height: 65px;
+    margin-left: 23px;
+    position: absolute;
+    
+}
+
+.input-card-number
+{
+    width: 100%;
+    border: none;
+    padding: 5px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.card-expiry
+{
+    color: #89FFFD;
+    text-align: center;
+}
+
+.input-card-expiry
+{
+    width: 9%;
+    margin: 0 5px 10px;
+    border: none;
+    padding: 5px;
+    border-radius: 6px;
+}
+
+.input-card-name
+{
+    width: 50%;
+    border: none;
+    padding: 5px;
+    border-radius: 6px;
+}
+
+.input-card-cryptogram
+{
+    right: 0;
+    bottom: 0;
+    width: 10%;
+    border: none;
+    padding: 5px;
+    position: absolute;
+    border-radius: 6px;
+    margin: 0 25px 25px 0;
+}
+/* ---------- FRONTEND/ORDER ----------> pay.html.twig <---------- */

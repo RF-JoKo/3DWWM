@@ -19,8 +19,8 @@
         <br>
         <div class="flex account-details-order">
             <div>
-                <h2>Récapitulatif de commande</h2>
-                <div class="account-recap-order">
+                <h2>Récapitulatif de ma commande</h2>
+                <div>
                     <table>
                         <thead>
                             <tr>
@@ -30,7 +30,7 @@
                                 <th>Total</th>
                             </tr>
                         </thead>
-                        <tbody class="tbody-bg">
+                        <tbody>
                             {% for element in order.orderDetails %}
                                 <tr>
                                     <td>{{ element.product }}</td>
@@ -40,10 +40,21 @@
                                 </tr>
                             {% endfor %}
                         </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="3"><strong>Total articles</strong></td>
+                                <td><span>{{ (order.getTotal / 100) | number_format(2, ',', '.') }}€</span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="3"><strong>Frais de livraison</strong></td>
+                                <td><span>{{ (order.carrierPrice / 100) | number_format(2, ',', '.') }}€</span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="3"><strong>Total de la commande</strong></td>
+                                <td><span class="order-price">{{ ((order.getTotal + order.carrierPrice) / 100) | number_format(2, ',', '.') }}€</span></td>
+                            </tr>
+                        </tfoot>
                     </table>
-                    <p>
-                        <strong>Total articles :</strong> {{ (order.getTotal / 100) | number_format(2, ',', '.') }}€
-                    </p>
                 </div>
             </div>
             <div>
@@ -55,8 +66,6 @@
                         <strong>Adresse de livraison :</strong>
                         <br>
                         {{ order.delivery|raw }}
-                        <br>
-                        <strong>Frais de livraison :</strong> {{ (order.carrierPrice / 100) | number_format(2, ',', '.') }}€
                     </p>
                 </div>
             </div>
