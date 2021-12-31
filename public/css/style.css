@@ -818,3 +818,55 @@ video
     margin: 0 25px 25px 0;
 }
 /* ---------- FRONTEND/ORDER ----------> pay.html.twig <---------- */
+
+
+/* ---------- FRONTEND/ORDER ----------> success.html.twig & cancel.html.twig <---------- */
+
+/* ---------- FRONTEND/ORDER ----------> success.html.twig & cancel.html.twig <---------- */
+
+
+.display-designer
+{
+    gap: 100px;
+    justify-content: center;
+}
+
+.display-designer h2
+{
+    margin-top: 15px;
+    font-weight: 300;
+}
+
+.profil-designer
+{
+    text-align: center;
+    padding: 25px;
+    border-radius: 6px;
+    background: rgba(245, 245, 245, .4);
+}
+
+.image-designer
+{
+    width: 75px;
+    height: 75px;
+}
+
+.card-product-display-designer
+{
+    margin-top: 5px;
+    position: relative;
+}
+
+.card-product-display-designer h3
+{
+    font-weight: 300;
+}
+
+.card-product-display-designer span
+{
+    top: 0;
+    right: 0;
+    font-size: 18px;
+    font-weight: 300;
+    position: absolute;
+}

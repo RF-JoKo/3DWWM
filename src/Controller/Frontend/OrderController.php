@@ -165,6 +165,12 @@ class OrderController extends AbstractController
             return $this->redirectToRoute('app_frontend_home_index');
         }
 
+        $mail = new Mail();
+
+        $content = "Bonjour".$order->getUser()->getFirstname()."<br>Il semblerait qu'une erreur se soit produite lors du paiement de votre commande.<br><br>Nous vous invitons à réessayer votre paiement en cliquant sur le lien 'Veuillez réessayer' de la page d'erreur.<br><br>À très vite !";
+
+        $mail->send($order->getUser()->getEmail(), $order->getUser()->getFirstname(), 'Erreur paiement 3DWWM', $content);
+
         return $this->render('frontend/order/cancel.html.twig', [
             'order' => $order
         ]);
