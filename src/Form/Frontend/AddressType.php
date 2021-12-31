@@ -60,7 +60,7 @@ class AddressType extends AbstractType
             ])
             ->add('country', CountryType::class, [
                 'label' => false,
-                'placeholder' => "Pays",
+                'preferred_choices' => ['FR'],
                 'attr' => [
                     'class' => 'input-address'
                 ]
