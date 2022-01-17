@@ -11,12 +11,14 @@ use App\Repository\AddressRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class AccountAddressController extends AbstractController
 {
     /**
      * @Route("/mon-compte/mes-adresses", name="app_frontend_account_address_index")
+     * @IsGranted("ROLE_USER")
      */
     public function index(): Response
     {
@@ -25,6 +27,7 @@ class AccountAddressController extends AbstractController
 
     /**
      * @Route("/mon-compte/ajouter-une-adresse", name="app_frontend_account_address_add")
+     * @IsGranted("ROLE_USER")
      */
     public function add(Cart $cart, Request $request): Response
     {
@@ -62,6 +65,7 @@ class AccountAddressController extends AbstractController
 
     /**
      * @Route("/mon-compte/modifier-mon-adresse/{id}", name="app_frontend_account_address_update")
+     * @IsGranted("ROLE_USER")
      */
     public function update(Request $request, $id, AddressRepository $addressRepository): Response
     {
@@ -92,7 +96,8 @@ class AccountAddressController extends AbstractController
     }
 
     /**
-     * @Route("/my-account/delete-my-address/{id}", name="app_frontend_account_address_delete")
+     * @Route("/mon-compte/delete-my-address/{id}", name="app_frontend_account_address_delete")
+     * @IsGranted("ROLE_USER")
      */
     public function delete($id, AddressRepository $addressRepository): Response
     {

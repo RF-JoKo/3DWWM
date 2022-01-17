@@ -10,19 +10,23 @@
 </head>
 
 <body>
-    
+
     {# HEADER #}
     <header class="flex">
         <a href="{{ path('app_frontend_home_index') }}"><h1><span>3D</span>WWM</h1></a>
         <nav class="flex">
+            {% if is_granted("ROLE_ADMIN") %}
+                <a href="{{ path('app_admin_dashboard_index') }}" class="admin">ADMIN</a>
+            {% endif %}
             <a href="{{ path('app_frontend_product_index') }}">Nos produits</a>
             {% if app.session.get('cart')|length == 0 %}
                 <a href="{{ path('app_frontend_cart_index') }}">Panier ({{ app.session.get('cart')|length }})</a>
             {% else %}
-                <a href="{{ path('app_frontend_cart_index') }}">Panier (<span>{{ app.session.get('cart')|length }}</span>)</a>
+                <a href="{{ path('app_frontend_cart_index') }}">Panier (<span>{{ app.session.get('cart')|reduce((carry, v) => carry + v) }}</span>)</a>
             {% endif %}
-            {% if app.user %}
-                <a href="{{ path('app_frontend_account_index') }}">Mon compte</a><a href="{{ path('app_logout') }}">Déconnexion</a>
+            {% if is_granted("ROLE_USER") %}
+                <a href="{{ path('app_frontend_account_index') }}">Mon compte</a>
+                <a href="{{ path('app_logout') }}">Déconnexion</a>
             {% else %}
                 <a href="{{ path('app_login') }}">Connexion</a>
             {% endif %}

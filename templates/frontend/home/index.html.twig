@@ -15,7 +15,7 @@
         <h1 class="title-home">Meilleures ventes</h1>
         <div class="flex cards-best">
             {% for product in products %}
-                <div>
+                <div class="card-best">
                     <a href="{{ path('app_frontend_product_display', {slug: product.slug}) }}">
                         <img src="/uploads/products/{{ product.image }}" alt="{{ product.name }}">
                     </a>

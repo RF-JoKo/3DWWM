@@ -12,6 +12,7 @@ use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class OrderController extends AbstractController
@@ -25,6 +26,7 @@ class OrderController extends AbstractController
 
     /**
      * @Route("/commande/details-expedition", name="app_frontend_order_delivery")
+     * @IsGranted("ROLE_USER")
      */
     public function delivery(Cart $cart): Response
     {
@@ -45,6 +47,7 @@ class OrderController extends AbstractController
 
     /**
      * @Route("/commande/recapitulatif", name="app_frontend_order_add", methods={"POST"})
+     * @IsGranted("ROLE_USER")
      */
     public function add(Cart $cart, Request $request): Response
     {
@@ -106,6 +109,7 @@ class OrderController extends AbstractController
 
     /**
      * @Route("/commande/paiement/{id}", name="app_frontend_order_pay")
+     * @IsGranted("ROLE_USER")
      */
     public function pay(Request $request, Order $order): Response
     {
@@ -128,6 +132,7 @@ class OrderController extends AbstractController
 
     /**
      * @Route("/commande/confirmation/{id}", name="app_frontend_order_confirm")
+     * @IsGranted("ROLE_USER")
      */
     public function confirm(Order $order, Cart $cart): Response
     {
@@ -157,6 +162,7 @@ class OrderController extends AbstractController
 
     /**
      * @Route("/commande/erreur/{id}", name="app_frontend_order_error")
+     * @IsGranted("ROLE_USER")
      */
     public function error(Order $order): Response
     {

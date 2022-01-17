@@ -8,6 +8,7 @@ use App\Form\Frontend\ModifyPasswordType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 
@@ -15,6 +16,7 @@ class AccountPasswordController extends AbstractController
 {
     /**
      * @Route("/mon-compte/modifier-mon-mot-de-passe", name="app_frontend_account_password_update")
+     * @IsGranted("ROLE_USER")
      */
     public function update(Request $request, UserPasswordHasherInterface $crypter): Response
     {
