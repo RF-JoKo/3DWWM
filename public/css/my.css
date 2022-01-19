@@ -873,3 +873,92 @@ video
     justify-content: space-around;
 }
 /* ---------- FRONTEND/DESIGNER ----------> display.html.twig <---------- */
+
+
+/* ---------- MEDIA QUERIES ---------- */
+
+@media screen and (max-width:800px)
+{
+    /* BODY */
+
+    /* HEADER */
+
+    /* BURGER MENU */
+    .menu
+    {
+        top: 0;
+        right: 0;
+        padding: 15px 20px;
+        position: absolute;
+        background: transparent;
+        justify-content: space-between!important;
+    }
+
+    .burger
+    {
+        display: block;
+        cursor: pointer;
+    }
+
+    .burger span
+    {
+        height: 5px;
+        width: 40px;
+        display: block;
+        transition: .3s;
+        border-radius: 6px;
+        background: #F5F5F5;
+    }
+
+    .burger span:nth-child(2)
+    {
+        margin: 6px 0;
+    }
+
+    .burger-reveal span:first-child
+    {
+        transform: rotate(45deg) translate(0, 5px);
+    }
+
+    .burger-reveal span:nth-child(2)
+    {
+        margin: 0;
+        opacity: 0;
+    }
+
+    .burger-reveal span:last-child
+    {
+        transform: rotate(-45deg) translate(0, -10px);
+    }
+
+    nav
+    {
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 75px;
+        height: 100vh;
+        transition: .5s;
+        position: absolute;
+        flex-direction: column;
+        transform: translateX(55%);
+        background: linear-gradient(90deg, #3E4044 0%, #28292F 100%);
+    }
+
+    nav a
+    {
+        font-size: 24px;
+        text-align: center;
+        font-weight: lighter;
+    }
+
+    .nav-reveal
+    {
+        transform: translateX(-45%);
+    }
+    /* BURGER MENU */
+
+    /* HEADER */
+
+    /* BODY */
+}
