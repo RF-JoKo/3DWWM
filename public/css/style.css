@@ -1067,6 +1067,11 @@ video
         align-self: center;
     }
     /* ---------- FRONTEND/ACCOUNT ----------> index.html.twig <---------- */
+
+
+    /* ---------- FRONTEND/ACCOUNT/ORDER ----------> index.html.twig <---------- */
+
+    /* ---------- FRONTEND/ACCOUNT/ORDER ----------> index.html.twig <---------- */
 }
 
 @media screen and (max-width:400px)
@@ -1074,13 +1079,19 @@ video
     /* BODY */
     .title
     {
-        font-size: 29px;
+        font-size: 19px;
+        margin-bottom: 15px;
     }
 
     .title::before
     {
         height: 6px;
-        width: 68px;
+        width: 44px;
+    }
+
+    #return
+    {
+        font-size: 12px;
     }
     /* BODY */
 
@@ -1115,4 +1126,11 @@ video
     /* ---------- FRONTEND/ACCOUNT ----------> index.html.twig <---------- */
 
     /* ---------- FRONTEND/ACCOUNT ----------> index.html.twig <---------- */
+
+    /* ---------- FRONTEND/ACCOUNT/ORDER ----------> index.html.twig <---------- */
+    .overflow
+    {
+        overflow-x: auto;
+    }
+    /* ---------- FRONTEND/ACCOUNT/ORDER ----------> index.html.twig <---------- */
 }

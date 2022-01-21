@@ -5,12 +5,13 @@
 {% block content %}
     <section>
         <h1 class="title">MES COMMANDES</h1>
-        <a href="{{ path('app_frontend_account_index') }}" class="link"><span class="arrow"><</span>Retour à mon compte</a>
+        <a href="{{ path('app_frontend_account_index') }}" id="return" class="link"><span class="arrow"><</span>Retour à mon compte</a>
         {% if orders|length == 0 %}
             <div class="center">
                 <p class="didn-t">Vous n'avez pas encore commandé.</p>
             </div>
         {% else %}
+            <div class="overflow">
             <table class="table-my-orders">
                 <thead>
                     <tr>
@@ -33,6 +34,7 @@
                     {% endfor %}
                 </tbody>
             </table>
+            </div>
         {% endif %}
     </section>
 {% endblock %}
