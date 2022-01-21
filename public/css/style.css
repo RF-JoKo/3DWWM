@@ -885,6 +885,16 @@ video
         padding: 0 25px;
     }
 
+    .title
+    {
+        font-size: 29px;
+    }
+
+    .title::before
+    {
+        width: 112px;
+    }
+
     /* HEADER */
 
     /* BURGER MENU */
@@ -968,7 +978,6 @@ video
 
 
     /* ---------- FRONTEND/HOME ----------> index.html.twig <---------- */
-
     .title-home
     {
         font-size: 54px;
@@ -1004,14 +1013,40 @@ video
         margin-bottom: 0px;
     }
     /* Who are we ? */
-    
+
     /* ---------- FRONTEND/HOME ----------> index.html.twig <---------- */
+
+
+    /* ---------- SECURITY ----------> register.html.twig <---------- */
+    .form-register .flex
+    {
+        flex-direction: column;
+    }
+
+    .form-register label
+    {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+    /* ---------- SECURITY ----------> register.html.twig <---------- */
 }
 
 @media screen and (max-width:400px)
 {
-    /* ---------- FRONTEND/HOME ----------> index.html.twig <---------- */
+    /* BODY */
+    .title
+    {
+        font-size: 19px;
+    }
 
+    .title::before
+    {
+        height: 6px;
+        width: 73px;
+    }
+    /* BODY */
+
+    /* ---------- FRONTEND/HOME ----------> index.html.twig <---------- */
     .title-home
     {
         font-size: 34px;
@@ -1021,6 +1056,13 @@ video
     {
         width: 80px;
     }
-
     /* ---------- FRONTEND/HOME ----------> index.html.twig <---------- */
+
+
+    /* ---------- SECURITY ----------> register.html.twig <---------- */
+    .form-register
+    {
+        width: 100%;
+    }
+    /* ---------- SECURITY ----------> register.html.twig <---------- */
 }
