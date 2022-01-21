@@ -333,6 +333,11 @@ video
     background: rgba(245, 245, 245, .4);
 }
 
+.form-login .flex
+{
+    margin-bottom: 25px;
+}
+
 .form-login label
 {
     font-size: 18px;
@@ -1007,11 +1012,6 @@ video
         margin-top: 475px;
         flex-direction: column;
     }
-
-    .resp-logo
-    {
-        margin-bottom: 0px;
-    }
     /* Who are we ? */
 
     /* ---------- FRONTEND/HOME ----------> index.html.twig <---------- */
@@ -1029,6 +1029,20 @@ video
         margin-bottom: 5px;
     }
     /* ---------- SECURITY ----------> register.html.twig <---------- */
+
+
+    /* ---------- SECURITY ----------> login.html.twig <---------- */
+    .form-login .flex
+    {
+        flex-direction: column;
+    }
+
+    .form-login label
+    {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+    /* ---------- SECURITY ----------> login.html.twig <---------- */
 }
 
 @media screen and (max-width:400px)
@@ -1065,4 +1079,11 @@ video
         width: 100%;
     }
     /* ---------- SECURITY ----------> register.html.twig <---------- */
+
+    /* ---------- SECURITY ----------> login.html.twig <---------- */
+    .form-login
+    {
+        width: 100%;
+    }
+    /* ---------- SECURITY ----------> login.html.twig <---------- */
 }
