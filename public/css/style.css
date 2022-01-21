@@ -875,11 +875,15 @@ video
 /* ---------- FRONTEND/DESIGNER ----------> display.html.twig <---------- */
 
 
-/* ---------- MEDIA QUERIES ---------- */
+/* ---------- RESPONSIVE DESIGN ---------- */
 
 @media screen and (max-width:800px)
 {
     /* BODY */
+    section
+    {
+        padding: 0 25px;
+    }
 
     /* HEADER */
 
@@ -947,9 +951,9 @@ video
 
     nav a
     {
-        font-size: 24px;
+        font-size: 20px;
+        font-weight: 300;
         text-align: center;
-        font-weight: lighter;
     }
 
     .nav-reveal
@@ -961,4 +965,62 @@ video
     /* HEADER */
 
     /* BODY */
+
+
+    /* ---------- FRONTEND/HOME ----------> index.html.twig <---------- */
+
+    .title-home
+    {
+        font-size: 54px;
+    }
+
+    .title-home::before
+    {
+        width: 125px;
+    }
+
+    /* Best sellers */
+    .best-sellers
+    {
+        padding-top: 10px;
+    }
+
+    .cards-best
+    {
+        gap: 25px;
+        flex-direction: column;
+    }
+    /* Best sellers */
+
+    /* Who are we ? */
+    .who-are-we
+    {
+        margin-top: 475px;
+        flex-direction: column;
+    }
+
+    .resp-logo
+    {
+        margin-bottom: 0px;
+    }
+    /* Who are we ? */
+    
+    /* ---------- FRONTEND/HOME ----------> index.html.twig <---------- */
+}
+
+@media screen and (max-width:400px)
+{
+    /* ---------- FRONTEND/HOME ----------> index.html.twig <---------- */
+
+    .title-home
+    {
+        font-size: 34px;
+    }
+
+    .title-home::before
+    {
+        width: 80px;
+    }
+
+    /* ---------- FRONTEND/HOME ----------> index.html.twig <---------- */
 }
