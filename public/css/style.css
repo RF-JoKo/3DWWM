@@ -44,7 +44,7 @@ img
 .title::before
 {
     content: "";
-    width: 150px;
+    width: 91px;
     height: 10px;
     display: block;
     margin-bottom: 10px;
@@ -892,12 +892,12 @@ video
 
     .title
     {
-        font-size: 29px;
+        font-size: 44px;
     }
 
     .title::before
     {
-        width: 112px;
+        width: 103px;
     }
 
     /* HEADER */
@@ -990,7 +990,7 @@ video
 
     .title-home::before
     {
-        width: 125px;
+        width: 127px;
     }
 
     /* Best sellers */
@@ -1043,6 +1043,30 @@ video
         margin-bottom: 5px;
     }
     /* ---------- SECURITY ----------> login.html.twig <---------- */
+
+
+    /* ---------- FRONTEND/ACCOUNT ----------> index.html.twig <---------- */
+    .cards-account
+    {
+        gap: 25px;
+        flex-direction: column;
+    }
+
+    .card-account
+    {
+        height: 50%;
+    }
+
+    .card-account:first-child
+    {
+        align-self: center;
+    }
+
+    .card-account:last-child
+    {
+        align-self: center;
+    }
+    /* ---------- FRONTEND/ACCOUNT ----------> index.html.twig <---------- */
 }
 
 @media screen and (max-width:400px)
@@ -1050,13 +1074,13 @@ video
     /* BODY */
     .title
     {
-        font-size: 19px;
+        font-size: 29px;
     }
 
     .title::before
     {
         height: 6px;
-        width: 73px;
+        width: 68px;
     }
     /* BODY */
 
@@ -1086,4 +1110,9 @@ video
         width: 100%;
     }
     /* ---------- SECURITY ----------> login.html.twig <---------- */
+
+
+    /* ---------- FRONTEND/ACCOUNT ----------> index.html.twig <---------- */
+
+    /* ---------- FRONTEND/ACCOUNT ----------> index.html.twig <---------- */
 }
