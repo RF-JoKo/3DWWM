@@ -1097,6 +1097,20 @@ video
         width: 100%;
     }
     /* ---------- FRONTEND/ACCOUNT/ADDRESS ----------> add.html.twig & update.html.twig <---------- */
+
+
+    /* ---------- FRONTEND/ACCOUNT/PASSWORD ----------> update.html.twig <---------- */
+    .form-password .flex
+    {
+        flex-direction: column;
+    }
+
+    .form-password label
+    {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+    /* ---------- FRONTEND/ACCOUNT/PASSWORD ----------> update.html.twig <---------- */
 }
 
 @media screen and (max-width:400px)
@@ -1202,10 +1216,13 @@ video
     {
         width: 100%;
     }
-
-    .form-address .button
-    {
-        font-size: 12px;
-    }
     /* ---------- FRONTEND/ACCOUNT/ADDRESS ----------> add.html.twig & update.html.twig <---------- */
+
+
+    /* ---------- FRONTEND/ACCOUNT/PASSWORD ----------> update.html.twig <---------- */
+    .form-password
+    {
+        width: 100%;
+    }
+    /* ---------- FRONTEND/ACCOUNT/PASSWORD ----------> update.html.twig <---------- */
 }
