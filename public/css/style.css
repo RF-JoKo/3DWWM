@@ -892,12 +892,17 @@ video
 
     .title
     {
-        font-size: 44px;
+        font-size: 42px;
     }
 
     .title::before
     {
-        width: 103px;
+        width: 98px;
+    }
+
+    .didn-t
+    {
+        margin-top: 25px;
     }
 
     /* HEADER */
@@ -1072,6 +1077,14 @@ video
     /* ---------- FRONTEND/ACCOUNT/ORDER ----------> index.html.twig <---------- */
 
     /* ---------- FRONTEND/ACCOUNT/ORDER ----------> index.html.twig <---------- */
+
+
+    /* ---------- FRONTEND/ACCOUNT/ORDER ----------> display.html.twig <---------- */
+    .account-details-order h2
+    {
+        font-size: 22px;
+    }
+    /* ---------- FRONTEND/ACCOUNT/ORDER ----------> display.html.twig <---------- */
 }
 
 @media screen and (max-width:400px)
@@ -1089,9 +1102,20 @@ video
         width: 44px;
     }
 
-    #return
+    .didn-t
+    {
+        font-size: 17px;
+        margin-top: 15px;
+    }
+
+    #fs-12
     {
         font-size: 12px;
+    }
+
+    .overflow
+    {
+        overflow-x: auto;
     }
     /* BODY */
 
@@ -1127,10 +1151,23 @@ video
 
     /* ---------- FRONTEND/ACCOUNT ----------> index.html.twig <---------- */
 
+    
     /* ---------- FRONTEND/ACCOUNT/ORDER ----------> index.html.twig <---------- */
-    .overflow
+    
+    /* ---------- FRONTEND/ACCOUNT/ORDER ----------> index.html.twig <---------- */
+
+
+    /* ---------- FRONTEND/ACCOUNT/ORDER ----------> display.html.twig <---------- */ 
+    .account-details-order
     {
-        overflow-x: auto;
+        gap: 20px;
+        margin: 0 auto;
+        flex-direction: column;
     }
-    /* ---------- FRONTEND/ACCOUNT/ORDER ----------> index.html.twig <---------- */
+
+    .account-details-order h2
+    {
+        font-size: 17px;
+    }
+    /* ---------- FRONTEND/ACCOUNT/ORDER ----------> display.html.twig <---------- */
 }

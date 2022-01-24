@@ -5,8 +5,8 @@
 {% block content %}
     <section>
         <h1 class="title">DÉTAILS DE LA COMMANDE</h1>
-        <a href="{{ path('app_frontend_account_order_index') }}" class="link"><span class="arrow"><</span>Retour à mes commandes</a>
-        <p>
+        <a href="{{ path('app_frontend_account_order_index') }}" id="fs-12" class="link"><span class="arrow"><</span>Retour à mes commandes</a>
+        <p id="fs-12">
             <br>
             Date de commande : {{ order.createdAt|date('d/m/Y') }}
             <br>
@@ -17,7 +17,7 @@
         <br>
         <hr>
         <br>
-        <div class="flex account-details-order">
+        <div id="fs-12" class="flex account-details-order">
             <div>
                 <h2>Récapitulatif de ma commande</h2>
                 <div>
