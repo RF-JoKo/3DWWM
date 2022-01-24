@@ -1085,6 +1085,11 @@ video
         font-size: 22px;
     }
     /* ---------- FRONTEND/ACCOUNT/ORDER ----------> display.html.twig <---------- */
+
+
+    /* ---------- FRONTEND/ACCOUNT/ADDRESS ----------> index.html.twig <---------- */
+
+    /* ---------- FRONTEND/ACCOUNT/ADDRESS ----------> index.html.twig <---------- */
 }
 
 @media screen and (max-width:400px)
@@ -1170,4 +1175,17 @@ video
         font-size: 17px;
     }
     /* ---------- FRONTEND/ACCOUNT/ORDER ----------> display.html.twig <---------- */
+
+
+    /* ---------- FRONTEND/ACCOUNT/ADDRESS ----------> index.html.twig <---------- */
+    .cards-account-address
+    {
+        flex-direction: column;
+    }
+
+    .card-account-address
+    {
+        width: 100%;
+    }
+    /* ---------- FRONTEND/ACCOUNT/ADDRESS ----------> index.html.twig <---------- */
 }
