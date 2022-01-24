@@ -1090,6 +1090,13 @@ video
     /* ---------- FRONTEND/ACCOUNT/ADDRESS ----------> index.html.twig <---------- */
 
     /* ---------- FRONTEND/ACCOUNT/ADDRESS ----------> index.html.twig <---------- */
+
+    /* ---------- FRONTEND/ACCOUNT/ADDRESS ----------> add.html.twig & update.html.twig <---------- */
+    .input-address-width
+    {
+        width: 100%;
+    }
+    /* ---------- FRONTEND/ACCOUNT/ADDRESS ----------> add.html.twig & update.html.twig <---------- */
 }
 
 @media screen and (max-width:400px)
@@ -1188,4 +1195,17 @@ video
         width: 100%;
     }
     /* ---------- FRONTEND/ACCOUNT/ADDRESS ----------> index.html.twig <---------- */
+
+
+    /* ---------- FRONTEND/ACCOUNT/ADDRESS ----------> add.html.twig & update.html.twig <---------- */
+    .form-address
+    {
+        width: 100%;
+    }
+
+    .form-address .button
+    {
+        font-size: 12px;
+    }
+    /* ---------- FRONTEND/ACCOUNT/ADDRESS ----------> add.html.twig & update.html.twig <---------- */
 }
