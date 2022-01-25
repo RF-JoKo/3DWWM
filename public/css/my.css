@@ -1119,6 +1119,10 @@ video
         margin-left: 20px;
     }
     /* ---------- FRONTEND/PRODUCT ----------> index.html.twig <---------- */
+
+    /* ---------- FRONTEND/PRODUCT ----------> display.html.twig <---------- */
+    
+    /* ---------- FRONTEND/PRODUCT ----------> display.html.twig <---------- */
 }
 
 @media screen and (max-width:400px)
@@ -1241,4 +1245,22 @@ video
         width: 100%;
     }
     /* ---------- FRONTEND/PRODUCT ----------> index.html.twig <---------- */
+
+
+    /* ---------- FRONTEND/PRODUCT ----------> display.html.twig <---------- */
+    .display-product
+    {
+        flex-direction: column;
+    }
+
+    .display-product-content
+    {
+        font-size: 12px;
+    }
+
+    .add-to-cart
+    {
+        text-align: center;
+    }
+    /* ---------- FRONTEND/PRODUCT ----------> display.html.twig <---------- */
 }

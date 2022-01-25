@@ -22,8 +22,8 @@
                 <p><strong>Catégorie :</strong> {{ product.category.name }}</p>
             </div>
             <br>
-            <div>
-                <a href="{{ path('app_frontend_cart_add', {id: product.id}) }}" class="button">Ajouter au panier</a>
+            <div class="add-to-cart">
+                <a href="{{ path('app_frontend_cart_add', {id: product.id}) }}" id="fs-12" class="button">Ajouter au panier</a>
             </div>
         </div>
     </section>
