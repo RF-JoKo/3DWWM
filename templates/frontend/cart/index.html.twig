@@ -5,12 +5,13 @@
 {% block content %}
     <section>
         <h1 class="title">PANIER</h1>
-        <a href="{{ path('app_frontend_product_index') }}" class="link"><span class="arrow"><</span>Retour à nos produits</a>
+        <a href="{{ path('app_frontend_product_index') }}" id="fs-12" class="link"><span class="arrow"><</span>Retour à nos produits</a>
         {% if app.session.get('cart')|length == 0 %}
         <div class="center">
             <p class="didn-t">Votre panier est vide.</p>
         </div>
         {% else %}
+            <div class="overflow">
             <table class="table-cart">
                 <thead>
                     <tr>
@@ -32,7 +33,7 @@
                             </td>
                             <td>{{ element.product.name }}</td>
                             <td>{{ (element.product.price / 100) | number_format(2, ',', '.') }}€</td>
-                            <td>
+                            <td class="quantity">
                                 <a href="{{ path('app_frontend_cart_remove', {id: element.product.id}) }}" class="button-remove">-</a>
                                 {{ element.quantity }}
                                 <a href="{{ path('app_frontend_cart_add', {id: element.product.id}) }}" class="button">+</a>
@@ -52,8 +53,9 @@
                     </tr>
                 </tfoot>
             </table>
+            </div>
             <div class="center">
-                <a href="{{ path('app_frontend_order_delivery') }}" class="button">Passer la commande</a>
+                <a href="{{ path('app_frontend_order_delivery') }}" id="fs-12" class="button">Passer la commande</a>
             </div>
         {% endif %}
     </section>

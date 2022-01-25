@@ -1120,9 +1120,19 @@ video
     }
     /* ---------- FRONTEND/PRODUCT ----------> index.html.twig <---------- */
 
+
     /* ---------- FRONTEND/PRODUCT ----------> display.html.twig <---------- */
     
     /* ---------- FRONTEND/PRODUCT ----------> display.html.twig <---------- */
+
+
+    /* ---------- FRONTEND/CART ----------> index.html.twig <---------- */
+    .table-cart .quantity
+    {
+        display: flex;
+        margin-top: 16px;
+    }
+    /* ---------- FRONTEND/CART ----------> index.html.twig <---------- */
 }
 
 @media screen and (max-width:400px)
@@ -1263,4 +1273,9 @@ video
         text-align: center;
     }
     /* ---------- FRONTEND/PRODUCT ----------> display.html.twig <---------- */
+
+
+    /* ---------- FRONTEND/CART ----------> index.html.twig <---------- */
+    
+    /* ---------- FRONTEND/CART ----------> index.html.twig <---------- */
 }
