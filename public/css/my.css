@@ -1111,6 +1111,14 @@ video
         margin-bottom: 5px;
     }
     /* ---------- FRONTEND/ACCOUNT/PASSWORD ----------> update.html.twig <---------- */
+
+
+    /* ---------- FRONTEND/PRODUCT ----------> index.html.twig <---------- */
+    .search .button
+    {
+        margin-left: 20px;
+    }
+    /* ---------- FRONTEND/PRODUCT ----------> index.html.twig <---------- */
 }
 
 @media screen and (max-width:400px)
@@ -1225,4 +1233,12 @@ video
         width: 100%;
     }
     /* ---------- FRONTEND/ACCOUNT/PASSWORD ----------> update.html.twig <---------- */
+
+
+    /* ---------- FRONTEND/PRODUCT ----------> index.html.twig <---------- */
+    .search
+    {
+        width: 100%;
+    }
+    /* ---------- FRONTEND/PRODUCT ----------> index.html.twig <---------- */
 }
